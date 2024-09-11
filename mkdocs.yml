@@ -1,0 +1,50 @@
+site_name: Diseño de Interfaces Web
+site_url: https://lupastance.github.io/interfaces
+
+theme:
+  name: material
+  language: es
+  logo: assets/logo.png
+  favicon: assets/logo.png
+
+  palette:
+    - scheme: slate
+      primary: blue grey
+      accent: lime
+      toggle:
+        icon: material/weather-sunny
+        name: Cambiar a modo claro
+
+    - scheme: default
+      primary: white
+      accent: pink
+      toggle:
+        icon: material/weather-night
+        name: Cambiar a modo oscuro
+
+  plugins:
+    - offline
+    - search:
+      enabled: true
+      lang: es
+
+  features:
+    - header.autohide
+    - navigation.footer
+    - navigation.path
+    - navigation.sections
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
+
+extra:
+  home: https://lupastance.github.io/interfaces/
+  generator: false
+  social:
+    - icon: fontawesome/brands/discord 
+      link: about:blank
+      name: Únete al canal de Discord
+
+copyright: Copyright &copy; Luis Alemañ 2024
