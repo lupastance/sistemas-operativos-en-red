@@ -1,5 +1,5 @@
-site_name: Diseño de Interfaces Web
-site_url: https://lupastance.github.io/interfaces
+site_name: Sistemas Operativos en Red
+site_url: https://lupastance.github.io/sistemas-operativos-en-red
 
 theme:
   name: material
@@ -9,21 +9,22 @@ theme:
 
   palette:
     - scheme: slate
-      primary: blue grey
+      primary: amber
       accent: lime
       toggle:
         icon: material/weather-sunny
         name: Cambiar a modo claro
 
     - scheme: default
-      primary: white
-      accent: pink
+      primary: light blue
+      accent: red
       toggle:
         icon: material/weather-night
         name: Cambiar a modo oscuro
 
   plugins:
     - offline
+    - open-in-new-tab
     - search:
       enabled: true
       lang: es
@@ -38,13 +39,18 @@ theme:
     - search.highlight
     - search.share
     - search.suggest
+    - toc.integrate
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
 
 extra:
   home: https://lupastance.github.io/interfaces/
   generator: false
   social:
     - icon: fontawesome/brands/discord 
-      link: about:blank
+      link: https://discord.gg/Rdyt6kvJAq
       name: Únete al canal de Discord
 
 copyright: Copyright &copy; Luis Alemañ 2024
