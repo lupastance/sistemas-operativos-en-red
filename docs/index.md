@@ -76,7 +76,7 @@ Este curso no solo os dotará de los conocimientos técnicos necesarios para ope
     - Se han establecido niveles de seguridad para controlar el acceso del usuario a los recursos compartidos en red.
     - Se ha comprobado el funcionamiento de los servicios instalados.
 
-## Unidades didácticas
+## 📖 Unidades didácticas
 
 En función del tiempo disponible que tenemos, el temario se ha dividido de la siguiente manera
 
@@ -194,7 +194,7 @@ En función del tiempo disponible que tenemos, el temario se ha dividido de la s
         - Laboratorio de integración y configuración de redes heterogéneas.
         - Proyectos grupales de implementación y verificación de servicios compartidos.
 
-## Discord
+## 🎙️ Discord
 
 <center>
 ![Discord Logo](assets/discord.png)
