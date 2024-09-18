@@ -196,6 +196,61 @@ Aunque menos común en servidores, las tarjetas gráficas especializadas pueden 
 
 ---
 
+## 1.2. Modos de Instalación de un Sistema Operativo en Red
+
+La instalación de un sistema operativo en red es una tarea fundamental en la administración de sistemas, ya que afecta la configuración, rendimiento, y estabilidad de la infraestructura tecnológica. Existen varios modos de instalación, cada uno adecuado para diferentes escenarios, dependiendo de factores como el número de equipos, las características del hardware, y los requerimientos específicos de la organización.
+
+### 1.2.1. Instalación Manual
+
+La instalación manual es el método más básico y tradicional de instalación de un sistema operativo. Implica la intervención directa del administrador para llevar a cabo todo el proceso, desde el particionado del disco hasta la configuración de las opciones del sistema operativo. Este método es adecuado cuando se necesita instalar el sistema en un número limitado de equipos o cuando es necesario un alto grado de personalización.
+
+#### 1.2.1.1. Proceso de Instalación Manual
+
+    Preparación del entorno: Antes de iniciar la instalación, se requiere tener acceso a un medio de instalación, que puede ser un CD, DVD, o una unidad USB con el sistema operativo. También es importante verificar que el hardware sea compatible con el sistema que se va a instalar.
+    Iniciar desde el medio de instalación: El servidor o equipo debe configurarse para arrancar desde el dispositivo de instalación. Esto generalmente se hace accediendo a la BIOS o UEFI para cambiar la secuencia de arranque.
+    Particionado de discos: El administrador debe elegir cómo particionar los discos del equipo. Esto incluye la creación de particiones para el sistema operativo, archivos de intercambio, y particiones adicionales si es necesario.
+    Selección de componentes y servicios: Durante la instalación manual, el administrador selecciona qué componentes y servicios del sistema operativo instalar, como servicios de red, servidores de archivos, o bases de datos.
+    Configuración post-instalación: Una vez que el sistema operativo está instalado, se configura la red, los usuarios, los permisos, y otras preferencias personalizadas.
+
+Ventajas
+
+    Control total: El administrador tiene el control absoluto sobre cada aspecto del proceso de instalación, permitiendo un alto grado de personalización.
+    Ideal para instalaciones únicas: Es adecuado para instalaciones en las que sólo se requiere configurar un número reducido de equipos, o en situaciones donde la instalación necesita personalización única.
+
+Desventajas
+
+    Tiempo: Es un proceso lento y laborioso, especialmente si se debe realizar en múltiples equipos.
+    Riesgo de error humano: Dado que el proceso es completamente manual, existe una mayor probabilidad de cometer errores, como un particionado incorrecto o una configuración errónea de los servicios.
+
+Escenarios adecuados
+
+    Instalación en servidores únicos que requieren configuraciones personalizadas.
+    Entornos de pruebas o laboratorios de aprendizaje.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## 📚 Ejercicios
 
 🔰 101. Definir Requisitos de Hardware.
