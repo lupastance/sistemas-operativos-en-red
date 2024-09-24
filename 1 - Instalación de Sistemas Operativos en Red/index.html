@@ -393,13 +393,30 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="1.2.1. Instalación Manual">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
-  <a href="#1211-proceso-de-instalacion-manual" class="md-nav__link">
+  <a href="#122-instalacion-desatendida-unattended-installation" class="md-nav__link">
     <span class="md-ellipsis">
-      1.2.1.1. Proceso de Instalación Manual
+      1.2.2 Instalación Desatendida (Unattended Installation)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#123-instalacion-a-traves-de-la-red-pxe-boot" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2.3. Instalación a través de la Red (PXE Boot)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#124-clonacion-de-imagenes-de-sistemas-operativos" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2.4. Clonación de Imágenes de Sistemas Operativos
     </span>
   </a>
   
@@ -407,6 +424,34 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-particionado-de-discos-y-seleccion-de-sistemas-de-archivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3 Particionado de Discos y Selección de Sistemas de Archivos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.3 Particionado de Discos y Selección de Sistemas de Archivos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#131-particionado-de-discos" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3.1. Particionado de Discos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#132-seleccion-de-sistemas-de-archivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3.2. Selección de Sistemas de Archivos
+    </span>
+  </a>
   
 </li>
         
@@ -762,35 +807,435 @@ Los fabricantes de sistemas operativos suelen proporcionar una lista de compatib
 <p>Aunque menos común en servidores, las tarjetas gráficas especializadas pueden ser necesarias en servidores que realizan tareas de procesamiento gráfico intensivo, como renderizado o computación en GPU. Es fundamental verificar la compatibilidad de estas tarjetas con el sistema operativo, especialmente si se utilizan drivers</p>
 <hr />
 <h2 id="12-modos-de-instalacion-de-un-sistema-operativo-en-red">1.2. Modos de Instalación de un Sistema Operativo en Red</h2>
+<p><center>
+    <img alt="Sistemas" src="../assets/1-2-sistemas.png" />
+</center></p>
 <p>La instalación de un sistema operativo en red es una tarea fundamental en la administración de sistemas, ya que afecta la configuración, rendimiento, y estabilidad de la infraestructura tecnológica. Existen varios modos de instalación, cada uno adecuado para diferentes escenarios, dependiendo de factores como el número de equipos, las características del hardware, y los requerimientos específicos de la organización.</p>
 <h3 id="121-instalacion-manual">1.2.1. Instalación Manual</h3>
 <p>La instalación manual es el método más básico y tradicional de instalación de un sistema operativo. Implica la intervención directa del administrador para llevar a cabo todo el proceso, desde el particionado del disco hasta la configuración de las opciones del sistema operativo. Este método es adecuado cuando se necesita instalar el sistema en un número limitado de equipos o cuando es necesario un alto grado de personalización.</p>
-<h4 id="1211-proceso-de-instalacion-manual">1.2.1.1. Proceso de Instalación Manual</h4>
-<pre><code>Preparación del entorno: Antes de iniciar la instalación, se requiere tener acceso a un medio de instalación, que puede ser un CD, DVD, o una unidad USB con el sistema operativo. También es importante verificar que el hardware sea compatible con el sistema que se va a instalar.
-Iniciar desde el medio de instalación: El servidor o equipo debe configurarse para arrancar desde el dispositivo de instalación. Esto generalmente se hace accediendo a la BIOS o UEFI para cambiar la secuencia de arranque.
-Particionado de discos: El administrador debe elegir cómo particionar los discos del equipo. Esto incluye la creación de particiones para el sistema operativo, archivos de intercambio, y particiones adicionales si es necesario.
-Selección de componentes y servicios: Durante la instalación manual, el administrador selecciona qué componentes y servicios del sistema operativo instalar, como servicios de red, servidores de archivos, o bases de datos.
-Configuración post-instalación: Una vez que el sistema operativo está instalado, se configura la red, los usuarios, los permisos, y otras preferencias personalizadas.
+<p><code>Preparación del entorno</code><br>
+Antes de iniciar la instalación, se requiere tener acceso a un medio de instalación, que puede ser un CD, DVD, o una unidad USB con el sistema operativo. También es importante verificar que el hardware sea compatible con el sistema que se va a instalar.</p>
+<p><code>Iniciar desde el medio de instalación</code><br>
+El servidor o equipo debe configurarse para arrancar desde el dispositivo de instalación. Esto generalmente se hace accediendo a la BIOS o UEFI para cambiar la secuencia de arranque.</p>
+<p><code>Particionado de discos</code><br>
+El administrador debe elegir cómo particionar los discos del equipo. Esto incluye la creación de particiones para el sistema operativo, archivos de intercambio, y particiones adicionales si es necesario.</p>
+<p><code>Selección de componentes y servicios</code><br>
+Durante la instalación manual, el administrador selecciona qué componentes y servicios del sistema operativo instalar, como servicios de red, servidores de archivos, o bases de datos.</p>
+<p><code>Configuración post-instalación</code><br>
+Una vez que el sistema operativo está instalado, se configura la red, los usuarios, los permisos, y otras preferencias personalizadas.</p>
+<div class="admonition note">
+<p class="admonition-title">Ventajas</p>
+<ul>
+<li>
+<p>Control total 👉🏻 El administrador tiene el control absoluto sobre cada aspecto del proceso de instalación, permitiendo un alto grado de personalización.</p>
+</li>
+<li>
+<p>Ideal para instalaciones únicas 👉🏻 Es adecuado para instalaciones en las que sólo se requiere configurar un número reducido de equipos, o en situaciones donde la instalación necesita personalización única.</p>
+</li>
+</ul>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Desventajas</p>
+<ul>
+<li>Tiempo 👉🏻 Es un proceso lento y laborioso, especialmente si se debe realizar en múltiples equipos.</li>
+<li>Riesgo de error humano 👉🏻 Dado que el proceso es completamente manual, existe una mayor probabilidad de cometer errores, como un particionado incorrecto o una configuración errónea de los servicios.</li>
+</ul>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Escenarios adecuados</p>
+<ul>
+<li>Instalación en servidores únicos que requieren configuraciones personalizadas.</li>
+<li>Entornos de pruebas o laboratorios de aprendizaje.</li>
+</ul>
+</div>
+<h3 id="122-instalacion-desatendida-unattended-installation">1.2.2 Instalación Desatendida (Unattended Installation)</h3>
+<p>La instalación desatendida es una solución más automatizada que permite al administrador definir todas las opciones de instalación en un archivo de respuesta antes de iniciar el proceso.</p>
+<p>Durante la instalación, el sistema operativo lee este archivo y se configura automáticamente sin intervención manual.</p>
+<p>Este método es muy eficiente cuando se deben instalar múltiples sistemas con la misma configuración o cuando se quiere estandarizar la instalación en diferentes equipos. Pero ¿cómo es el proceso de instalación desatendida?</p>
+<p><code>Creación del archivo de respuesta</code><br>
+El administrador crea un archivo de respuesta que contiene las opciones de instalación, como el particionado del disco, la configuración de red, y los usuarios predeterminados. En sistemas <strong>Windows</strong>, por ejemplo, este archivo puede ser un archivo XML que sigue un esquema específico.</p>
+<p><code>Distribución del medio de instalación</code><br>
+El archivo de respuesta se incluye en el medio de instalación (USB, DVD, o red), de modo que, al iniciar el proceso de instalación, el sistema operativo lo lea automáticamente y proceda con los ajustes definidos.</p>
+<p><code>Ejecución de la instalación</code><br>
+La instalación se realiza sin intervención humana, utilizando las opciones del archivo de respuesta. El sistema se instalará de acuerdo con las preferencias predeterminadas y, al finalizar, estará listo para su uso.</p>
+<div class="admonition note">
+<p class="admonition-title">Ventajas</p>
+<ul>
+<li>
+<p>Automatización y rapidez ➡️ Reduce significativamente el tiempo de instalación al no requerir intervención manual. Es ideal para grandes despliegues.</p>
+</li>
+<li>
+<p>Estandarización ➡️ Permite la creación de instalaciones homogéneas en múltiples equipos, lo que es esencial para mantener la consistencia en grandes infraestructuras.</p>
+</li>
+<li>
+<p>Menor probabilidad de errores ➡️ Al eliminar la intervención manual, se reduce el riesgo de errores durante el proceso de instalación.</p>
+</li>
+</ul>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Desventajas</p>
+<ul>
+<li>
+<p>Menor flexibilidad ➡️ La personalización durante la instalación es limitada, ya que todas las configuraciones están predefinidas en el archivo de respuesta.</p>
+</li>
+<li>
+<p>Requiere planificación previa ➡️ El archivo de respuesta debe ser configurado adecuadamente antes de la instalación, lo que puede requerir tiempo y planificación.</p>
+</li>
+</ul>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Escenarios adecuados</p>
+<ul>
+<li>Instalaciones masivas en entornos empresariales.</li>
+<li>Organizaciones que requieren una configuración uniforme en múltiples servidores o estaciones de trabajo.</li>
+</ul>
+</div>
+<h3 id="123-instalacion-a-traves-de-la-red-pxe-boot">1.2.3. Instalación a través de la Red (PXE Boot)</h3>
+<p>La instalación a través de la red utiliza la tecnología PXE (Preboot Execution Environment) para arrancar un equipo desde la red y cargar un sistema operativo desde un servidor central.</p>
+<p>En este caso, el medio de instalación no se requiere en cada equipo, ya que todos los archivos necesarios son descargados desde un servidor de instalación centralizado. Este método es común en grandes infraestructuras de IT, donde es necesario realizar despliegues masivos de sistemas operativos.</p>
+<pre><code>Veamos cómo es el proceso de instalación a través de la red
 </code></pre>
-<p>Ventajas</p>
-<pre><code>Control total: El administrador tiene el control absoluto sobre cada aspecto del proceso de instalación, permitiendo un alto grado de personalización.
-Ideal para instalaciones únicas: Es adecuado para instalaciones en las que sólo se requiere configurar un número reducido de equipos, o en situaciones donde la instalación necesita personalización única.
+<p><code>Configuración del servidor PXE</code><br>
+Se debe configurar un servidor PXE en la red, que contendrá la imagen de instalación del sistema operativo y gestionará las solicitudes de arranque de los equipos cliente.</p>
+<p><code>Arranque del equipo cliente</code><br>
+Los equipos cliente se configuran para arrancar desde la red mediante PXE. Al encenderse, estos envían una solicitud de arranque al servidor PXE.</p>
+<p><code>Descarga de la imagen de instalación</code><br>
+El servidor PXE responde con una imagen del sistema operativo y un archivo de arranque que permite al equipo cliente iniciar el proceso de instalación.</p>
+<p><code>Instalación del sistema operativo</code><br>
+Una vez descargada la imagen, la instalación procede de manera similar a otros métodos, con o sin intervención manual, dependiendo de la configuración.</p>
+<div class="admonition note">
+<p class="admonition-title">Ventajas</p>
+<ul>
+<li>
+<p>No requiere medios físicos 🤜🏻 Elimina la necesidad de preparar y distribuir medios físicos de instalación (como CDs o USBs) en cada equipo.</p>
+</li>
+<li>
+<p>Ideal para grandes infraestructuras 🤜🏻 Permite instalar sistemas operativos en múltiples equipos simultáneamente, lo que lo convierte en una excelente opción para empresas con cientos o miles de equipos.</p>
+</li>
+<li>Centralización 🤜🏻 La instalación se gestiona desde un servidor central, facilitando la administración y el mantenimiento de las imágenes de instalación.</li>
+</ul>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Desventajas</p>
+<ul>
+<li>Dependencia de la red  🤜🏻 Este método depende completamente de la red. Si hay problemas de conectividad o ancho de banda limitado, la instalación puede ser lenta o fallar.</li>
+<li>Configuración compleja 🤜🏻 Configurar un servidor PXE y mantener las imágenes de instalación puede ser más complicado que otros métodos.</li>
+</ul>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Escenarios adecuados</p>
+<ul>
+<li>
+<p>Instalación de sistemas operativos en empresas con grandes cantidades de equipos.</p>
+</li>
+<li>
+<p>Despliegues masivos en centros de datos.</p>
+</li>
+<li>
+<p>Instalación remota en oficinas distribuidas sin acceso físico a los equipos.</p>
+</li>
+</ul>
+</div>
+<h3 id="124-clonacion-de-imagenes-de-sistemas-operativos">1.2.4. Clonación de Imágenes de Sistemas Operativos</h3>
+<p>La clonación de imágenes es un método en el que se crea una copia exacta de un sistema operativo ya instalado y configurado. Esta imagen se puede replicar en otros equipos, lo que permite una instalación rápida y homogénea.</p>
+<p>Las herramientas como Clonezilla, Acronis o Norton Ghost son comúnmente utilizadas para realizar este tipo de instalaciones.</p>
+<pre><code>Proceso de Clonación
 </code></pre>
-<p>Desventajas</p>
-<pre><code>Tiempo: Es un proceso lento y laborioso, especialmente si se debe realizar en múltiples equipos.
-Riesgo de error humano: Dado que el proceso es completamente manual, existe una mayor probabilidad de cometer errores, como un particionado incorrecto o una configuración errónea de los servicios.
+<p><code>Preparación de la imagen</code><br>
+El administrador instala y configura un sistema operativo en un equipo "modelo". Este equipo debe tener la configuración y el software deseado para ser replicado.</p>
+<p><code>Creación de la imagen</code><br>
+Utilizando una herramienta de clonación, se crea una imagen exacta del disco duro del equipo modelo, incluyendo el sistema operativo, las configuraciones y las aplicaciones instaladas.</p>
+<p><code>Distribución de la imagen</code><br>
+Esta imagen se distribuye a otros equipos a través de medios físicos (USB, DVD) o a través de la red.</p>
+<p><code>Restaurar la imagen en otros equipos</code><br>
+Cada equipo recibe la imagen y la carga en su disco duro, replicando la instalación original.</p>
+<div class="admonition tip">
+<p class="admonition-title">Ventajas</p>
+<ul>
+<li>Rapidez ▶️ La clonación de imágenes es extremadamente rápida, ya que copia todo el sistema en una única operación.</li>
+<li>Estandarización ▶️ Todos los equipos reciben exactamente la misma configuración, garantizando uniformidad.</li>
+<li>Ideal para grandes despliegues ▶️ Es una excelente opción para implementar rápidamente el mismo sistema operativo en múltiples equipos.</li>
+</ul>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Desventajas</p>
+<ul>
+<li>Problemas de hardware ▶️ La imagen debe ser compatible con el hardware de todos los equipos. Si el hardware difiere significativamente, puede haber problemas de compatibilidad, especialmente con controladores</li>
+</ul>
+</div>
+<h2 id="13-particionado-de-discos-y-seleccion-de-sistemas-de-archivos">1.3 Particionado de Discos y Selección de Sistemas de Archivos</h2>
+<p><img align="right" alt="Sistemas" src="../assets/1-3-intro.png" /></p>
+<p>El particionado de discos y la selección del sistema de archivos son etapas cruciales durante la instalación de un sistema operativo en red. Estas decisiones influyen directamente en el rendimiento, la seguridad y la organización de los datos del sistema.</p>
+<p>Una correcta planificación del particionado y la elección adecuada del sistema de archivos aseguran que el servidor sea eficiente y fácil de mantener, y que pueda escalar según las necesidades de la red.</p>
+<h3 id="131-particionado-de-discos">1.3.1. Particionado de Discos</h3>
+<p>El particionado es el proceso de dividir un disco físico en secciones lógicas llamadas particiones.</p>
+<p>Cada partición puede funcionar como si fuera un disco separado, permitiendo gestionar diferentes sistemas operativos o separar datos del sistema en áreas distintas para optimizar el rendimiento o la seguridad.</p>
+<pre><code>Tipos de particiones
 </code></pre>
-<p>Escenarios adecuados</p>
-<pre><code>Instalación en servidores únicos que requieren configuraciones personalizadas.
-Entornos de pruebas o laboratorios de aprendizaje.
+<p>Existen varios tipos de particiones que se pueden utilizar en el particionado de discos, cada uno con sus características específicas:</p>
+<p><mark class="critic">Partición primaria</mark><br>
+Es una de las cuatro particiones principales que se pueden crear en un disco con el sistema de particionamiento MBR (Master Boot Record). Una de estas particiones primarias puede contener un sistema operativo y es donde suele alojarse el cargador de arranque.</p>
+<p><mark class="critic">Partición secundaria o extendida</mark><br>
+Si se necesitan más de cuatro particiones, una de las particiones primarias puede convertirse en una partición extendida. Dentro de esta partición se pueden crear particiones lógicas adicionales. Esto es útil cuando se requiere más flexibilidad en el número de particiones.</p>
+<p><mark class="critic">Particiones lógicas</mark><br>
+Son particiones que se crean <code>dentro de una partición extendida</code>. En un disco, se puede tener un número ilimitado de particiones lógicas. En muchos servidores, los administradores crean varias particiones lógicas para organizar datos y mejorar el rendimiento del sistema.</p>
+<pre><code>Estructura recomendada de particiones
 </code></pre>
+<p>El particionado adecuado de un disco debe estar alineado con el uso esperado del sistema y la cantidad de espacio en disco disponible. A continuación se presentan las particiones más comunes en servidores de red:</p>
+<p><mark class="critic">Partición del sistema operativo</mark><br>
+Se suele reservar una partición exclusiva para el sistema operativo. Esto permite que, en caso de que sea necesario reinstalar el sistema, los datos del servidor no se vean afectados. El tamaño de esta partición dependerá del sistema operativo instalado y los servicios que deba gestionar.</p>
+<p><mark class="critic">Partición de intercambio (swap)</mark> ➡️ Solo disponible en sistemas Linux<br>
+El intercambio es un espacio en disco utilizado por el sistema operativo para extender la memoria física del servidor cuando la RAM se llena. El tamaño recomendado de esta partición depende de la cantidad de RAM disponible, pero generalmente es entre 1 y 2 veces la cantidad de memoria RAM.</p>
+<p><mark class="critic">Particiones de datos</mark><br>
+En servidores, es común crear particiones específicas para datos, como los que almacena el servidor de archivos o las bases de datos. Separar los datos del sistema operativo puede mejorar el rendimiento y facilitar la administración de backups.</p>
+<p><mark class="critic">Partición de registros/logs</mark><br>
+Para mejorar el control sobre el sistema y prevenir problemas, se puede dedicar una partición a los registros del sistema (/var/log en sistemas Linux). De esta manera, si los registros llenan la partición, no afectarán otras áreas del sistema.</p>
+<p><mark class="critic">Partición /home o /users (para perfiles de usuario)</mark> ➡️ Solo disponible en sistemas Linux<br>
+En servidores donde los usuarios almacenan datos o perfiles personalizados, se puede dedicar una partición específica para esos perfiles, facilitando su mantenimiento y migración entre diferentes instalaciones.</p>
+<div class="admonition tip">
+<p class="admonition-title">Ventajas de un particionado adecuado</p>
+<p>Mejor organización 👉🏻 Al dividir el sistema operativo, los datos y los logs en diferentes particiones, se facilita la gestión de estos elementos.</p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Seguridad y mantenimiento</p>
+<p>Las particiones separadas permiten reinstalar o actualizar el sistema operativo sin perder datos importantes. También limita el impacto de ciertos tipos de errores o fallos en el sistema.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Optimización del rendimiento</p>
+<p>El particionado adecuado permite asignar sistemas de archivos y configuraciones de acceso optimizadas para diferentes tipos de uso, lo que mejora el rendimiento general del servidor.</p>
+</div>
+<h3 id="132-seleccion-de-sistemas-de-archivos">1.3.2. Selección de Sistemas de Archivos</h3>
+<p><img align="right" alt="Sistemas" src="../assets/1-3-discos.png" /></p>
+<p>El sistema de archivos es la estructura que utiliza un sistema operativo para gestionar y organizar los datos almacenados en un disco.</p>
+<p>Cada sistema operativo puede ofrecer diferentes sistemas de archivos, y la elección del sistema adecuado depende de factores como el tipo de datos, el rendimiento esperado, la compatibilidad y las características específicas de cada sistema de archivos.</p>
+<pre><code>Sistemas de archivos más comunes
+</code></pre>
+<p><mark class="critic">NTFS (New Technology File System)</mark> ➡️ Windows</p>
+<table>
+<thead>
+<tr>
+<th>👌🏻 Ventajas</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Seguridad avanzada</td>
+<td>Soporta permisos de archivos detallados y cifrado de datos</td>
+</tr>
+<tr>
+<td>Journaling</td>
+<td>Registro de cambios en el sistema de archivos, lo que protege contra pérdida de datos en caso de fallos</td>
+</tr>
+<tr>
+<td>Compresión</td>
+<td>Permite comprimir archivos para ahorrar espacio en disco</td>
+</tr>
+<tr>
+<td>Soporte para archivos grandes</td>
+<td>Soporta archivos individuales de hasta 16 TB</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>👎🏻 Desventajas</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Compatibilidad limitada</td>
+<td>Aunque Linux y otros sistemas operativos pueden leer y escribir en NTFS, no es el sistema de archivos nativo de estas plataformas</td>
+</tr>
+<tr>
+<td>Sobrecarga de recursos</td>
+<td>Requiere más recursos del sistema que otros sistemas de archivos, lo que puede afectar el rendimiento</td>
+</tr>
+</tbody>
+</table>
+<p><mark class="critic">ext4 (Fourth Extended File System)</mark> ➡️ Linux</p>
+<table>
+<thead>
+<tr>
+<th>👌🏻 Ventajas</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Journaling</td>
+<td>Como NTFS, ext4 utiliza journaling, lo que ayuda a prevenir la corrupción de datos</td>
+</tr>
+<tr>
+<td>Alto rendimiento</td>
+<td>ext4 está optimizado para grandes volúmenes de datos y ofrece un rendimiento sólido para sistemas de servidores</td>
+</tr>
+<tr>
+<td>Soporte de grandes volúmenes</td>
+<td>Puede manejar particiones de hasta 1 exabyte y archivos de hasta 16 terabytes</td>
+</tr>
+<tr>
+<td>Compatibilidad con Linux</td>
+<td>Es el sistema de archivos nativo de la mayoría de las distribuciones Linux, lo que facilita su integración</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>👎🏻 Desventajas</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Compatibilidad limitada con otros sistemas operativos</td>
+<td>Aunque existen herramientas para leer ext4 en Windows, no es un sistema de archivos ampliamente soportado fuera de Linux</td>
+</tr>
+</tbody>
+</table>
+<p><mark class="critic">XFS (Extended File System)</mark> ➡️ Linux para empresas y sistemas de alto rendimiento</p>
+<table>
+<thead>
+<tr>
+<th>👌🏻 Ventajas</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Rendimiento superior en archivos grandes</td>
+<td>XFS está optimizado para manejar grandes archivos y volúmenes de datos</td>
+</tr>
+<tr>
+<td>Escalabilidad</td>
+<td>Soporta sistemas de archivos extremadamente grandes y se comporta bien en servidores de alta carga</td>
+</tr>
+<tr>
+<td>Recuperación rápida</td>
+<td>En caso de fallo, XFS tiene mecanismos eficientes de recuperación</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>👎🏻 Desventajas</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Complejidad en la gestión</td>
+<td>Aunque potente, XFS puede ser más complicado de gestionar en comparación con ext4</td>
+</tr>
+<tr>
+<td>Journaling más intensivo</td>
+<td>El uso intensivo del journaling puede generar una mayor sobrecarga de recursos</td>
+</tr>
+</tbody>
+</table>
+<p><mark class="critic">FAT32 (File Allocation Table 32)</mark> ➡️ Windows y dispositivos portátiles</p>
+<table>
+<thead>
+<tr>
+<th>👌🏻 Ventajas</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Compatibilidad universal</td>
+<td>FAT32 es compatible con casi todos los sistemas operativos, lo que lo hace ideal para dispositivos externos</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>👎🏻 Desventajas</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tamaño de archivo limitado</td>
+<td>FAT32 no puede manejar archivos de más de 4 GB ni particiones mayores a 8 TB, lo que lo hace inadecuado para servidores modernos</td>
+</tr>
+<tr>
+<td>Falta de seguridad</td>
+<td>No soporta permisos de archivos ni journaling, lo que lo convierte en un sistema de archivos inseguro para entornos de red</td>
+</tr>
+</tbody>
+</table>
+<p><mark class="critic">ReFS (Resilient File System)</mark> ➡️ Windows Server</p>
+<table>
+<thead>
+<tr>
+<th>👌🏻 Ventajas</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Alta resiliencia</td>
+<td>ReFS está diseñado para evitar la corrupción de datos, incluso en volúmenes grandes</td>
+</tr>
+<tr>
+<td>Optimizado para almacenamiento</td>
+<td>Está diseñado para manejar grandes cantidades de datos y puede corregir errores de forma automática</td>
+</tr>
+<tr>
+<td>Soporte de integridad de datos</td>
+<td>Usa checksums para asegurarse de que los datos almacenados sean correctos y no se corrompan</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>👎🏻 Desventajas</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Limitaciones de compatibilidad</td>
+<td>Solo disponible en versiones específicas de Windows Server y no tan compatible con otras plataformas como NTFS</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Factores a considerar en la selección del sistema de archivos</p>
+<ul>
+<li>
+<p><strong>Compatibilidad</strong>: El sistema de archivos debe ser compatible con el sistema operativo y los dispositivos de la red. Por ejemplo, NTFS es ideal para entornos Windows, mientras que ext4 es mejor para servidores Linux.</p>
+</li>
+<li>
+<p><strong>Seguridad</strong>: En entornos empresariales, la seguridad es crucial. Sistemas de archivos como NTFS y ReFS ofrecen mejores controles de acceso y cifrado de datos que FAT32.</p>
+</li>
+<li>
+<p><strong>Rendimiento</strong>: Algunos sistemas de archivos están optimizados para manejar grandes volúmenes de datos o archivos grandes (como XFS o ReFS), mientras que otros pueden ser más ligeros pero limitados en cuanto al tamaño de archivos y particiones.</p>
+</li>
+<li>
+<p><strong>Tamaño del volumen y los archivos</strong>: Sistemas de archivos como ext4 y XFS pueden manejar volúmenes y archivos muy grandes, lo que es importante en servidores con almacenamiento masivo.</p>
+</li>
+<li>
+<p><strong>Recuperación ante fallos</strong>: Sistemas de archivos con journaling, como NTFS y ext4, ofrecen mecanismos para proteger la integridad de los datos, lo que es esencial en servidores de misión crítica.</p>
+</li>
+</ul>
+</div>
+<p>🚀 Resumiendo 🚀 la correcta planificación del particionado de discos y la elección del sistema de archivos son decisiones clave que determinan la estabilidad, seguridad y rendimiento de un sistema operativo en red. <mark class="critic">Un particionado mal gestionado</mark> o una elección inadecuada de sistemas de archivos puede resultar en pérdida de datos, problemas de rendimiento o dificultades para escalar el sistema.</p>
+<hr />
 <h2 id="ejercicios">📚 Ejercicios</h2>
-<p>🔰 101. Definir Requisitos de Hardware.
+<p><i style="color: grey; text-decoration: line-through; opacity: 0.5;">🔰 101. Definir Requisitos de Hardware.
 Explica los requisitos mínimos y recomendados de hardware para instalar el sistema operativo Windows Server 2022. Incluye especificaciones de procesador, memoria RAM, y espacio en disco.</p>
 <p>🔰 102. HCL de Hardware: Investiga y describe qué es una Lista de Compatibilidad de Hardware (HCL) y por qué es importante consultarla antes de la instalación de un sistema operativo en red.</p>
 <p>🔰 103. Comparativa de Controladores: Compara y contrasta los diferentes métodos para obtener controladores para un sistema operativo Windows y uno Linux. ¿Qué diferencias hay en el proceso de obtención y actualización de controladores?</p>
 <p>🔰 104. Firmware y su Importancia: Describe el papel del firmware en un sistema informático. ¿Cómo afecta una versión desactualizada del firmware a la instalación de un sistema operativo?</p>
-<p>🔰 105. Compatibilidad BIOS vs. UEFI: Explica las diferencias entre BIOS y UEFI. ¿Qué ventajas ofrece UEFI sobre BIOS para la instalación de sistemas operativos modernos?</p>
+<p>🔰 105. Compatibilidad BIOS vs. UEFI: Explica las diferencias entre BIOS y UEFI. ¿Qué ventajas ofrece UEFI sobre BIOS para la instalación de sistemas operativos modernos?</i></p>
 <p>🔰 106. Documentación Técnica: ¿Cómo interpretar la documentación técnica de un sistema operativo para verificar la compatibilidad del hardware? Proporciona un ejemplo de cómo se realiza esta interpretación.</p>
 <p>🔰 107. Evaluación de Componentes Específicos: Enumera los componentes de hardware críticos en un servidor y discute por qué es importante verificar su compatibilidad con el sistema operativo antes de la instalación.</p>
 <p>🔰 108. Proceso de Actualización de Controladores: Describe el proceso de actualización de controladores en un sistema operativo Linux. ¿Qué herramientas y comandos se utilizan para este propósito?</p>
