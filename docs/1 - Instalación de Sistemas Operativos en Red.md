@@ -492,7 +492,155 @@ Cada sistema operativo puede ofrecer diferentes sistemas de archivos, y la elecc
 
 
 
+### **1.4. Actualización de Sistemas Operativos en Red**
 
+Actualizar un sistema operativo en red es un proceso fundamental para garantizar la seguridad, el rendimiento y la estabilidad del entorno de red. Las actualizaciones permiten corregir vulnerabilidades, mejorar el funcionamiento de los servicios y acceder a nuevas funcionalidades. A diferencia de los sistemas operativos de escritorio, los sistemas operativos en red, como Windows Server, Linux Server o macOS Server, suelen manejar infraestructuras críticas, lo que significa que las actualizaciones deben ser gestionadas con especial atención y planificación.
+
+#### **1.4.1. Tipos de Actualizaciones**
+
+Existen diferentes tipos de actualizaciones que se pueden aplicar a un sistema operativo en red. Cada una tiene una finalidad específica y varía en cuanto a su importancia y frecuencia:
+
+!!!warning "Actualizaciones de seguridad"
+
+Estas actualizaciones son críticas y deben aplicarse con regularidad. Están diseñadas para corregir vulnerabilidades en el sistema operativo que podrían ser explotadas por atacantes. No aplicar estas actualizaciones puede poner en riesgo toda la infraestructura de la red, lo que podría comprometer los datos y los servicios.
+
+**Características:**
+- Frecuencia: Frecuente (pueden liberarse varias veces al mes).
+- Prioridad: Alta.
+- Impacto: Generalmente bajo, pero puede requerir reinicios.
+
+**Ejemplo:**
+Una actualización de seguridad que corrige una vulnerabilidad en el protocolo SMB (Server Message Block), utilizado en el intercambio de archivos en la red.
+
+!!!tip "Actualizaciones de rendimiento o estabilidad"
+
+Este tipo de actualizaciones está destinado a mejorar el rendimiento general del sistema operativo o resolver errores que afectan su estabilidad. Son menos urgentes que las actualizaciones de seguridad, pero igualmente importantes para mantener el sistema operativo funcionando de manera eficiente.
+
+**Características:**
+- Frecuencia: Moderada (mensual o trimestral).
+- Prioridad: Media.
+- Impacto: Pueden requerir reinicios, pero su objetivo es mejorar la estabilidad del sistema.
+
+**Ejemplo:**
+Una actualización que corrige una fuga de memoria en un servicio del sistema que provoca un consumo elevado de recursos a lo largo del tiempo.
+
+!!!note "Actualizaciones de características"
+Estas actualizaciones añaden nuevas funcionalidades al sistema operativo o mejoran las existentes. Pueden incluir mejoras en las interfaces gráficas, nuevos servicios para la red o la compatibilidad con nuevas tecnologías. Las actualizaciones de características deben ser gestionadas con cautela, ya que a veces pueden provocar problemas de compatibilidad con el hardware o software existente.
+
+**Características:**
+- Frecuencia: Baja (anual o semestral).
+- Prioridad: Baja a media.
+- Impacto: Alto, ya que pueden requerir reinicios y reconfiguraciones. A veces puede cambiar la experiencia del usuario o del administrador del sistema.
+
+**Ejemplo:**
+Una actualización que agrega soporte para nuevas versiones del protocolo de virtualización o servicios de almacenamiento en red (NAS/SAN).
+
+!!!danger "Actualizaciones críticas o urgentes"
+
+Estas actualizaciones son liberadas cuando se detecta una amenaza importante o un error crítico en el sistema operativo. Suele ser necesario aplicarlas inmediatamente para evitar que el fallo afecte el funcionamiento del servidor o la seguridad de la red.
+
+**Características:**
+- Frecuencia: Muy variable (cuando se detecta un problema grave).
+- Prioridad: Muy alta.
+- Impacto: Puede requerir reinicios inmediatos, lo que puede causar una interrupción temporal del servicio.
+
+**Ejemplo:**
+Una actualización que corrige un fallo de seguridad explotado activamente por ciberdelincuentes (vulnerabilidad de día cero).
+
+#### **1.4.2. Métodos de Actualización**
+
+Actualizar un sistema operativo en red requiere una cuidadosa planificación. Existen diferentes enfoques para realizar actualizaciones, cada uno con sus ventajas e inconvenientes:
+
+##### **1.4.2.1. Actualización manual**
+En este método, el administrador del sistema descarga e instala manualmente las actualizaciones en el servidor. Aunque puede ser un proceso más controlado, también es más lento y propenso a errores si se realiza en múltiples servidores.
+
+**Ventajas:**
+- Control total del proceso de actualización.
+- Se puede seleccionar qué actualizaciones aplicar y cuáles omitir.
+  
+**Desventajas:**
+- Consumo de tiempo y recursos, especialmente en entornos grandes.
+- Mayor riesgo de errores humanos en la instalación o configuración de las actualizaciones.
+
+##### **1.4.2.2. Actualización automática**
+Los sistemas operativos en red pueden configurarse para descargar e instalar actualizaciones de manera automática. Esto asegura que las actualizaciones críticas se apliquen sin la intervención del administrador, pero también puede causar interrupciones inesperadas si el servidor se reinicia sin previo aviso.
+
+**Ventajas:**
+- Garantiza que las actualizaciones se apliquen a tiempo, especialmente las de seguridad.
+- Reduce la carga administrativa en entornos con muchos servidores.
+  
+**Desventajas:**
+- Falta de control sobre el momento exacto en que se aplican las actualizaciones.
+- Riesgo de reinicios inesperados que pueden interrumpir los servicios.
+
+##### **1.4.2.3. Actualización programada**
+Este método combina los beneficios de la actualización manual y automática. Los administradores pueden programar las actualizaciones para que se apliquen en momentos específicos, como durante las horas de menor actividad en la red o los fines de semana.
+
+**Ventajas:**
+- Control sobre cuándo se aplican las actualizaciones, minimizando el impacto en los servicios.
+- Se pueden aplicar en horarios que no afecten a los usuarios.
+  
+**Desventajas:**
+- Requiere planificación, lo que puede ser un problema en entornos donde las actualizaciones deben aplicarse con urgencia.
+- Riesgo de retrasar actualizaciones críticas si no se gestionan bien los cronogramas.
+
+##### **1.4.2.4. Actualización con servidores de pruebas**
+En entornos grandes o críticos, es recomendable probar las actualizaciones en servidores de prueba antes de implementarlas en los servidores de producción. Esto permite identificar problemas de compatibilidad o fallos que puedan surgir a raíz de la actualización.
+
+**Ventajas:**
+- Reduce el riesgo de errores en los servidores de producción.
+- Permite probar y ajustar las actualizaciones antes de implementarlas en toda la red.
+
+**Desventajas:**
+- Requiere recursos adicionales (servidores de prueba).
+- Puede ralentizar el proceso de actualización si hay muchas pruebas que realizar.
+
+#### **1.4.3. Procedimientos para la Actualización de Sistemas Operativos en Red**
+
+El proceso de actualización de un sistema operativo en red debe seguir una serie de pasos para garantizar que se realice de manera controlada y sin afectar los servicios críticos. A continuación, se describen los pasos comunes en una actualización típica:
+
+##### **1.4.3.1. Planificación y evaluación**
+Antes de aplicar una actualización, es crucial analizar los cambios que esta implicará. El administrador debe evaluar el impacto potencial en los servicios y determinar si existen riesgos, como la incompatibilidad de hardware o software.
+
+- **Revisión de las notas de la versión**: Leer cuidadosamente las notas de la actualización para comprender qué se corrige, qué se mejora y si hay riesgos conocidos.
+- **Evaluación del sistema**: Verificar si el servidor y las aplicaciones instaladas son compatibles con la nueva versión.
+  
+##### **1.4.3.2. Respaldo de la configuración y los datos**
+Antes de aplicar cualquier actualización, se debe realizar una copia de seguridad completa del sistema, incluyendo la configuración del servidor y los datos críticos. Esto permite recuperar el sistema en caso de que algo salga mal durante la actualización.
+
+- **Backups completos**: Respaldar no solo los archivos de datos, sino también las configuraciones y servicios clave (por ejemplo, la configuración del servidor de correo o la base de datos).
+- **Verificación del backup**: Asegurarse de que las copias de seguridad son funcionales y se pueden restaurar.
+
+##### **1.4.3.3. Aplicación de las actualizaciones**
+Una vez realizada la planificación y el respaldo, se procede a la instalación de las actualizaciones. Este paso puede variar dependiendo del método seleccionado (manual, automático, programado).
+
+- **Monitoreo del proceso**: Supervisar el progreso de la instalación para detectar errores o fallos tempranos.
+- **Reinicio controlado**: Si es necesario un reinicio del sistema, debe hacerse en un momento que afecte lo menos posible a los usuarios y servicios.
+
+##### **1.4.3.4. Verificación post-actualización**
+Después de aplicar las actualizaciones, es fundamental verificar que el sistema operativo y los servicios de red estén funcionando correctamente.
+
+- **Pruebas de conectividad**: Comprobar la conectividad de los equipos cliente con el servidor actualizado.
+- **Comprobación de servicios**: Asegurarse de que todos los servicios críticos (correo, DNS, DHCP, etc.) están funcionando como se esperaba.
+- **Revisión de logs**: Consultar los registros del sistema para detectar posibles errores o advertencias que hayan surgido durante el proceso de actualización.
+
+##### **1.4.3.5. Documentación del proceso**
+Por último, es importante documentar todo el proceso de actualización. Esto incluye las versiones de software instaladas, cualquier problema detectado y las soluciones aplicadas. La documentación será útil para futuras actualizaciones o en caso de necesitar restaurar el sistema.
+
+#### **1.4.4. Desafíos Comunes en la Actualización de Sistemas Operativos en Red**
+
+Actualizar sistemas operativos en red puede presentar diversos desafíos, especialmente en infraestructuras grandes o críticas. Algunos de los problemas más comunes incluyen:
+
+-
+
+ **Incompatibilidades de software o hardware**: Algunas actualizaciones pueden no ser compatibles con ciertos controladores o aplicaciones, lo que puede causar fallos de funcionamiento.
+- **Interrupciones del servicio**: Si no se planifican adecuadamente, las actualizaciones pueden provocar cortes en el servicio, afectando la disponibilidad de la red.
+- **Errores en la actualización**: A veces, las actualizaciones pueden fallar durante su aplicación, dejando el sistema en un estado inestable.
+- **Dependencias no resueltas**: Algunas actualizaciones pueden requerir la instalación previa de otras actualizaciones o software, lo que puede complicar el proceso.
+
+---
+
+En conclusión, la actualización de sistemas operativos en red es una tarea fundamental que debe abordarse con cuidado y planificación. Mantener un sistema actualizado no solo garantiza la seguridad de la red, sino que también mejora el rendimiento y la estabilidad del entorno de trabajo. Los administradores de sistemas deben dominar los procedimientos adecuados para aplicar actualizaciones y estar preparados para resolver cualquier problema que pueda surgir durante el proceso.
 
 
 
@@ -514,7 +662,7 @@ Explica los requisitos mínimos y recomendados de hardware para instalar el sist
 
 🔰 104. Firmware y su Importancia: Describe el papel del firmware en un sistema informático. ¿Cómo afecta una versión desactualizada del firmware a la instalación de un sistema operativo?
 
-🔰 105. Compatibilidad BIOS vs. UEFI: Explica las diferencias entre BIOS y UEFI. ¿Qué ventajas ofrece UEFI sobre BIOS para la instalación de sistemas operativos modernos?</i>
+🔰 105. Compatibilidad BIOS vs. UEFI: Explica las diferencias entre BIOS y UEFI. ¿Qué ventajas ofrece UEFI sobre BIOS para la instalación de sistemas operativos modernos?
 
 🔰 106. Documentación Técnica: ¿Cómo interpretar la documentación técnica de un sistema operativo para verificar la compatibilidad del hardware? Proporciona un ejemplo de cómo se realiza esta interpretación.
 
@@ -524,24 +672,7 @@ Explica los requisitos mínimos y recomendados de hardware para instalar el sist
 
 🔰 109. Pruebas de Compatibilidad: ¿Qué tipos de pruebas de compatibilidad se pueden realizar antes de la instalación de un sistema operativo en un nuevo hardware? Enumera y explica al menos tres tipos de pruebas.
 
-🔰 110. Problemas de Compatibilidad Comunes: Identifica y explica tres problemas comunes de compatibilidad que pueden surgir durante la instalación de un sistema operativo y cómo se pueden prevenir o resolver.
+🔰 110. Problemas de Compatibilidad Comunes: Identifica y explica tres problemas comunes de compatibilidad que pueden surgir durante la instalación de un sistema operativo y cómo se pueden prevenir o resolver.</i>
 
-🔰 111. Consulta de HCL: Accede al sitio web del fabricante del sistema operativo (por ejemplo, Microsoft, Red Hat, Canonical) y localiza la HCL. Identifica al menos 6 componentes de hardware compatibles con el sistema operativo.
+🔰 111. Windows 2022 Server ➡️ [Descarga los ejercicios](assets/windows-2022-ejercicios.html)
 
-🔰 112. Verificación de Controladores: Descarga los controladores más recientes para una tarjeta de red específica desde el sitio web del fabricante. Realiza la instalación en un entorno de prueba y verifica si el hardware funciona correctamente.
-
-🔰 113. Actualización de Firmware: Localiza y descarga la actualización de firmware para una controladora RAID en un servidor. Sigue el procedimiento recomendado por el fabricante para actualizar el firmware y verifica el estado del hardware después de la actualización.
-
-🔰 114. Configuración de BIOS/UEFI: Accede a la configuración de BIOS/UEFI en un servidor y cambia la configuración de arranque para habilitar el soporte UEFI si es necesario. Documenta los pasos realizados y los cambios efectuados.
-
-🔰 115. Simulación de Instalación: Utiliza una herramienta de virtualización (como VMware o VirtualBox) para simular la instalación de un sistema operativo en una configuración de hardware virtual. Observa y documenta cualquier problema de compatibilidad que aparezca durante la instalación.
-
-🔰 116. Comprobación de Requisitos del Sistema: Instala una herramienta de diagnóstico en un sistema para verificar que el hardware cumple con los requisitos del sistema operativo que se planea instalar. Genera un informe y verifica la compatibilidad.
-
-🔰 117. Prueba de Compatibilidad de Controladores en Linux: En un entorno Linux, instala una tarjeta de red que no esté incluida en el núcleo del sistema. Descarga e instala el controlador necesario, y verifica que la tarjeta de red esté operativa.
-
-🔰 118.Configuración de Periféricos: Instala y configura una impresora de red en un servidor y verifica que sea reconocida correctamente por el sistema operativo. Realiza una prueba de impresión para asegurar la funcionalidad completa.
-
-🔰 119. Evaluación de Compatibilidad del Hardware: Realiza una evaluación completa de un nuevo servidor para asegurar que todos los componentes (como CPU, memoria RAM, disco duro y tarjetas de expansión) sean compatibles con el sistema operativo en red. Documenta tus hallazgos.
-
-🔰 120. Verificación de Controladores en un Entorno Virtual: Crea un entorno virtual para probar la instalación de un sistema operativo en red. Asegúrate de que todos los controladores virtuales (para red, almacenamiento, etc.) sean compatibles y funcionen correctamente durante la instalación.
