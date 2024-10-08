@@ -640,14 +640,125 @@ Actualizar sistemas operativos en red puede presentar diversos desafíos, especi
 
 ---
 
-En conclusión, la actualización de sistemas operativos en red es una tarea fundamental que debe abordarse con cuidado y planificación. Mantener un sistema actualizado no solo garantiza la seguridad de la red, sino que también mejora el rendimiento y la estabilidad del entorno de trabajo. Los administradores de sistemas deben dominar los procedimientos adecuados para aplicar actualizaciones y estar preparados para resolver cualquier problema que pueda surgir durante el proceso.
+!!!tip "Conclusión"
+    La actualización de sistemas operativos en red es una tarea fundamental que debe abordarse con cuidado y planificación. Mantener un sistema actualizado no solo garantiza la seguridad de la red, sino que también mejora el rendimiento y la estabilidad del entorno de trabajo. Los administradores de sistemas deben dominar los procedimientos adecuados para aplicar actualizaciones y estar preparados para resolver cualquier problema que pueda surgir durante el proceso.
 
+### **1.5 Comprobación de la conectividad del servidor con los equipos cliente**
 
+Una vez que el sistema operativo en red está instalado y configurado, es fundamental comprobar que la conectividad entre el servidor y los equipos cliente funciona correctamente. La conectividad entre estos elementos es esencial para que los servicios ofrecidos por el servidor (autenticación, gestión de archivos, aplicaciones, etc.) estén disponibles para los clientes.
 
+#### **1.5.1 Verificación de la conectividad mediante herramientas de red**
 
+Existen diversas herramientas que permiten comprobar si un servidor y sus clientes están comunicándose correctamente a través de la red:
 
+`Ping`: El comando ping se utiliza para verificar si un cliente puede alcanzar el servidor en la red. Permite medir el tiempo de respuesta (latencia) y detectar si hay problemas en la conectividad.
 
+`Ejemplo práctico`: ping 192.168.1.1 (donde 192.168.1.1 es la dirección IP del servidor).
+Traceroute (tracert en Windows): Esta herramienta permite rastrear la ruta que siguen los paquetes de datos desde el cliente hasta el servidor. Es útil para detectar problemas en diferentes puntos de la red.
 
+`Ejemplo práctico`: tracert 192.168.1.1.
+Netstat: Permite visualizar las conexiones activas en el servidor y en los clientes, verificando qué puertos están abiertos y qué servicios están utilizando la red.
+
+`Ejemplo práctico:` netstat -an.
+Nslookup y Dig: Estas herramientas permiten verificar que los servidores DNS están funcionando correctamente y que los nombres de dominio pueden resolverse a direcciones IP.
+
+`Ejemplo práctico:` nslookup servidor.local.
+
+#### **1.5.2 Configuración de pruebas básicas de conectividad**
+
+A continuación, se presentan los pasos básicos para comprobar que los equipos cliente y el servidor pueden comunicarse correctamente:
+
+!!!warning "***Comprobación de la conectividad IP:***"
+
+    Realizar un ping desde el cliente hacia la IP del servidor.
+    Si el ping es exitoso, se puede decir que la conectividad a nivel de red está establecida.
+
+***Pruebas con servicios específicos***
+
+Si se ha configurado un servicio de archivos (por ejemplo, SMB), probar a acceder a los recursos compartidos desde un cliente.
+Si se ha configurado Active Directory, probar a iniciar sesión en el dominio desde una máquina cliente.
+
+➡️ Revisión de registros de eventos:
+
+Utilizar el Visor de eventos para identificar posibles errores en los servicios o en la red, tanto en el servidor como en los equipos cliente.
+
+!!!danger "Comprobación de los cortafuegos"
+
+    Asegurarse de que los cortafuegos en los equipos cliente y el servidor permiten el tráfico de red necesario para los servicios que se están utilizando. Verificar las reglas del firewall en Windows Defender o en cualquier otro software de seguridad que esté instalado en el servidor.
+
+#### **1.5.3 Resolución de problemas comunes de conectividad**
+
+Algunos problemas comunes que pueden surgir durante la verificación de conectividad y las posibles soluciones:
+
+⭕ ***Problemas de resolución de nombres***: Si los equipos cliente no pueden resolver el nombre del servidor, puede deberse a una configuración incorrecta del servidor DNS. Asegúrate de que los clientes están utilizando el DNS correcto y de que los registros DNS están correctamente configurados.
+
+⭕ ***Direcciones IP incorrectas***: Verifica que tanto el servidor como los clientes tienen direcciones IP correctas y en la misma subred. Si se están utilizando direcciones IP automáticas, asegúrate de que el servidor DHCP está funcionando correctamente.
+
+⭕ ***Problemas de configuración del cortafuegos***: A menudo, los cortafuegos pueden bloquear la comunicación entre el servidor y los clientes. Revisa las configuraciones del cortafuegos y asegúrate de que los puertos necesarios están abiertos para el tráfico de red.
+
+⭕ ***Interrupciones en la red***: Si el ping a veces falla o la conectividad es intermitente, puede haber problemas físicos con los cables de red o los dispositivos de red (switches, routers). Comprueba el hardware y la estabilidad de la red.
+
+### **1.6 Automatización de instalaciones**
+
+La automatización del proceso de instalación es una práctica común en entornos empresariales para reducir el tiempo y el esfuerzo manual necesarios en la configuración de múltiples servidores o estaciones de trabajo.
+
+#### **1.6.1 Archivos de respuesta y scripts de instalación**
+
+La mayoría de los sistemas operativos en red permiten la instalación desatendida mediante el uso de archivos de respuesta o scripts de instalación, los cuales incluyen las respuestas a las preguntas que normalmente se hacen durante la instalación interactiva. Este método es útil cuando se necesita instalar el sistema operativo en varios servidores o estaciones de trabajo con configuraciones similares.
+
+***Archivos de respuesta***: Son documentos de texto o XML que contienen las configuraciones predefinidas para una instalación. En el caso de Windows Server, estos archivos son generados por la herramienta Windows System Image Manager (WSIM).
+
+Ejemplo de parámetros en un archivo de respuesta:
+
+    🟨 Configuración del disco duro (particionado).
+
+    🟨 Selección de sistema de archivos.
+
+    🟨 Configuración de red (IP estática).
+
+    🟨 Nombre del equipo y configuración regional.
+
+    🟨 Scripts de instalación en Linux: En sistemas operativos Linux, la automatización
+    se puede lograr utilizando scripts kickstart (en Red Hat y derivados)
+    o preseed (en Debian y derivados). Estos scripts contienen todas las instrucciones
+    para realizar la instalación de forma automática y sin intervención del usuario.
+
+#### **1.6.2 Implementación de plantillas de virtualización**
+
+En entornos de virtualización, una técnica común para automatizar la instalación de sistemas operativos en red es utilizar plantillas. Una plantilla es una máquina virtual base que ya tiene el sistema operativo y las configuraciones iniciales instaladas. A partir de esta plantilla, se pueden clonar nuevas máquinas virtuales con rapidez.
+
+!!!top "Ventajas de las plantillas:"
+
+    🟨 Permiten desplegar servidores rápidamente.
+
+    🟨 Garantizan uniformidad en las configuraciones.
+
+    🟨 Reducen errores en la configuración manual.
+
+    🟨 Gestión de plantillas en VirtualBox y otros entornos: Los entornos de virtualización
+    como VirtualBox, VMware o Hyper-V permiten gestionar estas plantillas y clonar nuevas
+    máquinas virtuales con facilidad. Estas herramientas permiten que los administradores
+    desplieguen rápidamente nuevos servidores o estaciones de trabajo con configuraciones
+    predefinidas.
+
+#### **1.6.3 Ventajas de la automatización de instalaciones**
+
+Entre las principales ventajas de la automatización de instalaciones se encuentran:
+
+🟩 Ahorro de tiempo: Al no tener que realizar todas las configuraciones manualmente, se reduce considerablemente el tiempo necesario para instalar sistemas operativos en múltiples servidores.
+
+🟩 Reducción de errores humanos: Al utilizar configuraciones predefinidas y probadas, se minimiza la posibilidad de errores durante la instalación.
+
+🟩 Despliegue en masa: Permite realizar despliegues masivos de servidores o estaciones de trabajo de manera rápida y eficiente.
+
+---
+
+!!!note "Conclusión del Tema 1"
+    En este tema, se han abordado los aspectos fundamentales relacionados con la instalación de sistemas operativos en red. Hemos visto cómo preparar el entorno antes de la instalación, los modos de instalación posibles (manual, desatendida, basada en red), cómo particionar discos y elegir el sistema de archivos adecuado, la importancia de mantener el sistema actualizado, y la verificación de la conectividad con los equipos cliente.
+
+    Además, se ha explorado el uso de herramientas para la automatización de instalaciones, una técnica crucial en entornos empresariales para garantizar la consistencia y reducir el tiempo de configuración. Estos conocimientos proporcionan una base sólida para gestionar infraestructuras de red eficientes y seguras.
+
+    A lo largo del desarrollo de estos conceptos, el objetivo ha sido que los alumnos comprendan tanto los aspectos técnicos como las mejores prácticas que deben aplicar a la hora de instalar y configurar sistemas operativos en red en entornos profesionales.
 
 ---
 
