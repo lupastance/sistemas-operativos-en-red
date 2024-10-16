@@ -22,7 +22,7 @@
     
     
       
-        <title>2️⃣ Gestión de Usuarios y Grupos - Sistemas Operativos en Red</title>
+        <title>2️⃣ Windows 2019 Server Gestión de Usuarios y Grupos - Sistemas Operativos en Red</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#2-gestion-de-usuarios-y-grupos" class="md-skip">
+        <a href="#2-windows-2019-server-gestion-de-usuarios-y-grupos" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -109,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              2️⃣ Gestión de Usuarios y Grupos
+              2️⃣ Windows 2019 Server Gestión de Usuarios y Grupos
             
           </span>
         </div>
@@ -285,15 +285,510 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    2️⃣ Windows 2019 Server Gestión de Usuarios y Grupos
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    2️⃣ Gestión de Usuarios y Grupos
+    2️⃣ Windows 2019 Server Gestión de Usuarios y Grupos
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-primer-inicio-de-sesion" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Primer Inicio de Sesión
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Primer Inicio de Sesión">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-iniciar-sesion-como-administrador" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1. Iniciar sesión como Administrador
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-configuracion-inicial-del-servidor" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Configuración Inicial del Servidor
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Configuración Inicial del Servidor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-configuracion-de-la-zona-horaria" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1. Configuración de la Zona Horaria
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-cambiar-el-nombre-del-servidor" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2. Cambiar el Nombre del Servidor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-configurar-la-direccion-ip" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3. Configurar la Dirección IP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24-comprobar-la-conectividad" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4. Comprobar la Conectividad
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-actualizar-el-sistema-operativo" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Actualizar el Sistema Operativo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Actualizar el Sistema Operativo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-configurar-windows-update" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1. Configurar Windows Update
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-configurar-roles-y-caracteristicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Configurar Roles y Características
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Configurar Roles y Características">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-active-directory-domain-services-ad-ds" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 Active Directory Domain Services (AD DS)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.1 Active Directory Domain Services (AD DS)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#caracteristicas-claves" class="md-nav__link">
+    <span class="md-ellipsis">
+      Características Claves:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aplicaciones-comunes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aplicaciones Comunes:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-dns-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 DNS Server
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.2 DNS Server">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#caracteristicas-claves_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Características Claves:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43-dhcp-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3 DHCP Server
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.3 DHCP Server">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#caracteristicas-claves_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Características Claves:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aplicaciones-comunes_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aplicaciones Comunes:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44-file-and-storage-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4 File and Storage Services
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.4 File and Storage Services">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#caracteristicas-claves_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Características Claves:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aplicaciones-comunes_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aplicaciones Comunes:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45-agregar-roles-y-caracteristicas" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5 Agregar Roles y Características
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.5 Agregar Roles y Características">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#paso-1-instalacion-de-roles-en-windows-server-2019" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paso 1: Instalación de Roles en Windows Server 2019
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Paso 1: Instalación de Roles en Windows Server 2019">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-instalar-el-rol-de-active-directory-domain-services-ad-ds" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1. Instalar el rol de Active Directory Domain Services (AD DS)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-promover-el-servidor-a-controlador-de-dominio" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2. Promover el servidor a controlador de dominio
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-2-configuracion-de-usuarios-grupos-y-equipos-en-active-directory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paso 2: Configuración de Usuarios, Grupos y Equipos en Active Directory
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Paso 2: Configuración de Usuarios, Grupos y Equipos en Active Directory">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-crear-usuarios-en-active-directory" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1. Crear usuarios en Active Directory
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-crear-grupos-en-active-directory" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2. Crear grupos en Active Directory
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-crear-equipos-y-agregarlos-al-dominio" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3. Crear equipos y agregarlos al dominio
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-3-configuracion-de-permisos-y-asignacion-de-grupos-a-carpetas-compartidas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paso 3: Configuración de Permisos y Asignación de Grupos a Carpetas Compartidas
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Paso 3: Configuración de Permisos y Asignación de Grupos a Carpetas Compartidas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-compartir-una-carpeta-en-el-servidor" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1. Compartir una carpeta en el servidor
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-asignar-permisos-de-seguridad-avanzados" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2. Asignar permisos de seguridad avanzados
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#paso-4-configurar-directivas-de-grupo-gpo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Paso 4: Configurar Directivas de Grupo (GPO)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Paso 4: Configurar Directivas de Grupo (GPO)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-crear-una-directiva-de-grupo" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1. Crear una Directiva de Grupo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-aplicar-una-configuracion-mediante-gpo" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2. Aplicar una configuración mediante GPO
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-configurar-firewall" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Configurar Firewall
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Configurar Firewall">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-configuracion-del-firewall" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1. Configuración del Firewall
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-activar-windows-server-2019" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Activar Windows Server 2019
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Activar Windows Server 2019">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-activacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1. Activación
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-configuracion-de-escritorio-remoto-opcional" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Configuración de Escritorio Remoto (opcional)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Configuración de Escritorio Remoto (opcional)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-habilitar-escritorio-remoto" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.1. Habilitar Escritorio Remoto
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -394,7 +889,370 @@
                   
 
 
-<h1 id="2-gestion-de-usuarios-y-grupos">2️⃣ Gestión de Usuarios y Grupos</h1>
+<h1 id="2-windows-2019-server-gestion-de-usuarios-y-grupos">2️⃣ Windows 2019 Server Gestión de Usuarios y Grupos</h1>
+<p><img align="right" alt="Sistemas" src="../assets/2-intro.png" /></p>
+<p>Vamos a preparar la configuración inicial de <strong>Windows Server 2019</strong> justo después del primer inicio de sesión. Este proceso incluye ajustes esenciales que todo servidor debe tener configurados antes de ser utilizado en un entorno de red, como la asignación de un nombre de servidor, la configuración de la red, y la instalación de roles y características.</p>
+<h2 id="1-primer-inicio-de-sesion"><strong>1. Primer Inicio de Sesión</strong></h2>
+<p>Después de haber instalado Windows Server 2019 y reiniciado la máquina virtual, sigue estos pasos:</p>
+<h3 id="11-iniciar-sesion-como-administrador"><strong>1.1. Iniciar sesión como Administrador</strong></h3>
+<ol>
+<li>En la pantalla de inicio de sesión, selecciona el usuario <strong>Administrador</strong>.</li>
+<li>Introduce la contraseña que configuraste durante la instalación y pulsa <strong>Enter</strong>.</li>
+<li>Windows Server iniciará y automáticamente se abrirá el <strong>Administrador del servidor (Server Manager)</strong>, que es la herramienta central para configurar y administrar el servidor.</li>
+</ol>
+<h2 id="2-configuracion-inicial-del-servidor"><strong>2. Configuración Inicial del Servidor</strong></h2>
+<h3 id="21-configuracion-de-la-zona-horaria"><strong>2.1. Configuración de la Zona Horaria</strong></h3>
+<ol>
+<li>
+<p>En el <strong>Administrador del servidor</strong>, ve al lado superior derecho y haz clic en <strong>"Local Server"</strong> (Servidor Local).</p>
+</li>
+<li>
+<p>En el panel de detalles, junto a la opción <strong>"Time zone"</strong> (Zona horaria), haz clic en el valor actual (por defecto será UTC).</p>
+</li>
+<li>
+<p>En la ventana emergente, selecciona la zona horaria correcta según tu ubicación (por ejemplo, <strong>"(UTC +1:00) Madrid"</strong>) y haz clic en <strong>OK</strong>.</p>
+</li>
+</ol>
+<h3 id="22-cambiar-el-nombre-del-servidor"><strong>2.2. Cambiar el Nombre del Servidor</strong></h3>
+<p>El nombre del servidor debe ser algo descriptivo y único para facilitar la administración en red.</p>
+<ol>
+<li>
+<p>En <strong>Servidor Local</strong>, haz clic en el nombre del servidor actual junto a <strong>"Computer Name"</strong>.</p>
+</li>
+<li>
+<p>Se abrirá la ventana de <strong>Propiedades del sistema</strong>. Haz clic en el botón <strong>"Change"</strong>.</p>
+</li>
+<li>
+<p>En la ventana <strong>Cambios en el nombre del equipo</strong>, introduce el nuevo nombre en el campo <strong>Computer Name</strong> (por ejemplo, "SRV2019").</p>
+</li>
+<li>
+<p>Haz clic en <strong>OK</strong> y acepta las advertencias. El sistema te pedirá que reinicies el servidor. Hazlo después de completar la siguiente sección sobre configuración de red.</p>
+</li>
+</ol>
+<h3 id="23-configurar-la-direccion-ip"><strong>2.3. Configurar la Dirección IP</strong></h3>
+<p>Para que el servidor pueda interactuar correctamente en una red, necesita tener una dirección IP estática.</p>
+<ol>
+<li>
+<p>En <strong>Servidor Local</strong>, en el apartado <strong>Ethernet</strong>, haz clic en el enlace al adaptador de red (probablemente "Ethernet 0").</p>
+</li>
+<li>
+<p>Se abrirá la ventana de <strong>Estado de Ethernet</strong>. Haz clic en <strong>Propiedades</strong>.</p>
+</li>
+<li>
+<p>Selecciona <strong>Protocolo de Internet versión 4 (TCP/IPv4)</strong> y haz clic en <strong>Propiedades</strong>.</p>
+</li>
+<li>
+<p>Cambia la opción de <strong>Obtener una dirección IP automáticamente</strong> a <strong>Usar la siguiente dirección IP</strong> e introduce los siguientes valores según tu red:</p>
+</li>
+<li>
+<p><strong>Dirección IP</strong>: (por ejemplo, <code>192.168.1.100</code> o la IP que desees).</p>
+</li>
+<li><strong>Máscara de subred</strong>: (por ejemplo, <code>255.255.255.0</code>).</li>
+<li>
+<p><strong>Puerta de enlace predeterminada</strong>: (por ejemplo, <code>192.168.1.1</code>).</p>
+</li>
+<li>
+<p>En <strong>Servidores DNS</strong>, introduce la dirección IP del servidor DNS de tu red o usa el DNS público de Google (<code>8.8.8.8</code>) o el de tu red.</p>
+</li>
+<li>
+<p>Haz clic en <strong>Aceptar</strong> y cierra todas las ventanas.</p>
+</li>
+</ol>
+<h3 id="24-comprobar-la-conectividad"><strong>2.4. Comprobar la Conectividad</strong></h3>
+<ol>
+<li>
+<p>Abre <strong>Símbolo del sistema</strong> desde el menú de inicio.</p>
+</li>
+<li>
+<p>Escribe el siguiente comando para verificar que el servidor tiene conectividad:</p>
+</li>
+</ol>
+<pre><code class="language-bash">ping google.com
+</code></pre>
+<div class="admonition note">
+<p class="admonition-title">Haciendo ping</p>
+<p>Si obtienes respuestas, la configuración de red es correcta. Si no, revisa los pasos anteriores.</p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Cuidado</p>
+<p>Puede ser que no obtengas respuesta haciendo ping ya que Consellería puede bloquear este comando. Asegurate de que tienes Internet navegando a través de un cliente web o navegador</p>
+</div>
+<h2 id="3-actualizar-el-sistema-operativo"><strong>3. Actualizar el Sistema Operativo</strong></h2>
+<p>Mantener el servidor actualizado es fundamental para la seguridad y el rendimiento.</p>
+<h3 id="31-configurar-windows-update"><strong>3.1. Configurar Windows Update</strong></h3>
+<ol>
+<li>
+<p>En <strong>Servidor Local</strong>, haz clic en <strong>"Windows Update"</strong>.</p>
+</li>
+<li>
+<p>Haz clic en <strong>Buscar actualizaciones</strong> para descargar e instalar las actualizaciones pendientes.</p>
+</li>
+<li>
+<p>Es recomendable habilitar la opción de actualizar automáticamente el servidor. Para hacerlo, haz clic en <strong>Cambiar la configuración</strong> y selecciona <strong>Instalar actualizaciones automáticamente</strong>.</p>
+</li>
+<li>
+<p>Una vez que las actualizaciones estén instaladas, reinicia el servidor si es necesario.</p>
+</li>
+</ol>
+<h2 id="4-configurar-roles-y-caracteristicas"><strong>4. Configurar Roles y Características</strong></h2>
+<p><img align="right" alt="Usuarios" src="../assets/2-users.png" /></p>
+<p>Un <strong>rol</strong> en Windows Server es una función principal que realiza el servidor en la red. Cada rol proporciona un conjunto de servicios o funcionalidades que el servidor puede desempeñar para los clientes, equipos y otros servidores en la red.</p>
+<p>Windows Server permite agregar varios roles dependiendo de las necesidades de la red, lo que lo convierte en una plataforma altamente flexible. Algunos ejemplos de roles son <strong>Active Directory Domain Services (AD DS)</strong>, <strong>DNS Server</strong>, <strong>DHCP Server</strong> y <strong>File and Storage Services</strong>, que se describen a continuación. </p>
+<p>La gestión de los roles se realiza desde el <strong>Administrador del servidor</strong>, donde se pueden instalar, configurar y administrar fácilmente.</p>
+<h3 id="41-active-directory-domain-services-ad-ds"><strong>4.1 Active Directory Domain Services (AD DS)</strong></h3>
+<p><strong>Active Directory Domain Services (AD DS)</strong> es uno de los roles más importantes en Windows Server, y se utiliza para gestionar la autenticación y autorización en una red de dominio. <strong>AD DS</strong> es la base de lo que se conoce como un <strong>Dominio Windows</strong>, que permite a los administradores centralizar la administración de usuarios, equipos, recursos y políticas de seguridad en una red.</p>
+<h4 id="caracteristicas-claves"><strong>Características Claves:</strong></h4>
+<ol>
+<li>
+<p><strong>Directorio jerárquico</strong>: AD DS organiza la información en una estructura jerárquica. Esto incluye objetos como usuarios, equipos, impresoras, grupos, etc.</p>
+</li>
+<li>
+<p><strong>Autenticación centralizada</strong>: Proporciona un servicio centralizado para autenticar usuarios y dispositivos. Todos los usuarios que inician sesión en un dominio se autentican mediante AD DS.</p>
+</li>
+<li>
+<p><strong>Control de acceso</strong>: Permite a los administradores definir quién puede acceder a qué recursos en la red, como carpetas, impresoras y aplicaciones.</p>
+</li>
+<li>
+<p><strong>Políticas de grupo (GPOs)</strong>: Las políticas de grupo permiten a los administradores establecer configuraciones y restricciones a nivel de usuarios o equipos, aplicándolos desde un servidor central a través del dominio.</p>
+</li>
+<li>
+<p><strong>Dominios y Unidades Organizativas (OUs)</strong>: AD DS permite organizar usuarios y dispositivos en <strong>dominios</strong> y <strong>OUs (Organizational Units)</strong> para facilitar la administración y la aplicación de políticas.</p>
+</li>
+<li>
+<p><strong>Relaciones de confianza</strong>: Puedes establecer relaciones de confianza entre dominios y/o forestas, lo que permite que usuarios en diferentes dominios accedan a recursos entre sí de manera segura.</p>
+</li>
+</ol>
+<h4 id="aplicaciones-comunes"><strong>Aplicaciones Comunes:</strong></h4>
+<ul>
+<li>Centralización de la autenticación y administración de usuarios en una red empresarial.</li>
+<li>Implementación de políticas de seguridad en todos los dispositivos conectados al dominio.</li>
+<li>Administración de accesos a recursos como impresoras, carpetas compartidas y aplicaciones empresariales.</li>
+</ul>
+<h3 id="42-dns-server"><strong>4.2 DNS Server</strong></h3>
+<p>El <strong>DNS (Domain Name System) Server</strong> es un rol fundamental en cualquier red. Su función principal es traducir nombres de dominio legibles por humanos (como www.ejemplo.com) a direcciones IP legibles por máquinas (como 192.168.1.10). Esto es necesario porque mientras los humanos recordamos nombres, las computadoras y los routers usan direcciones IP para encontrar y comunicarse entre sí en la red.</p>
+<h4 id="caracteristicas-claves_1"><strong>Características Claves:</strong></h4>
+<ol>
+<li>
+<p><strong>Resolución de nombres</strong>: Traducir nombres de dominio a direcciones IP es la tarea principal de un servidor DNS. Esto permite que, al escribir un nombre de dominio en un navegador, se pueda localizar y acceder al servidor correcto.</p>
+</li>
+<li>
+<p><strong>Zonas y Registros</strong>:</p>
+</li>
+<li><strong>Zona Directa (Forward Lookup Zone)</strong>: Es donde se almacenan los registros A, que mapean nombres de dominio a direcciones IP.</li>
+<li>
+<p><strong>Zona Inversa (Reverse Lookup Zone)</strong>: Aquí se almacenan los registros PTR, que hacen el proceso inverso, es decir, traducen direcciones IP en nombres de dominio.</p>
+</li>
+<li>
+<p><strong>Caching DNS</strong>: Para mejorar la velocidad de respuesta, los servidores DNS almacenan en caché las respuestas a las consultas recientes. Esto permite que futuras consultas a esos dominios sean más rápidas.</p>
+</li>
+<li>
+<p><strong>Delegación de zonas</strong>: En entornos grandes o complejos, un servidor DNS puede delegar la responsabilidad de resolver subdominios a otros servidores DNS.</p>
+</li>
+<li>
+<p><strong>Resolución de nombres externos</strong>: Los servidores DNS internos también pueden consultar servidores DNS externos para resolver nombres de dominio de Internet.</p>
+</li>
+</ol>
+<p><strong>Aplicaciones Comunes:</strong>
+- Resolución de nombres de dominio dentro de una red local para acceder a servidores o recursos.
+- Resolución de nombres de dominio de Internet para acceder a sitios web.
+- Soporte de servicios como Active Directory, que dependen de DNS para localizar recursos dentro de la red.</p>
+<h3 id="43-dhcp-server"><strong>4.3 DHCP Server</strong></h3>
+<p>El <strong>DHCP (Dynamic Host Configuration Protocol) Server</strong> es un rol que se encarga de asignar dinámicamente direcciones IP y otros parámetros de red a los dispositivos que se conectan a la red. Este servicio facilita la administración de grandes redes, ya que elimina la necesidad de configurar manualmente las direcciones IP en cada dispositivo.</p>
+<h4 id="caracteristicas-claves_2"><strong>Características Claves:</strong></h4>
+<ol>
+<li>
+<p><strong>Asignación Automática de IP</strong>: El servidor DHCP asigna automáticamente direcciones IP a los dispositivos que se conectan a la red. Esto asegura que no haya conflictos de IP.</p>
+</li>
+<li>
+<p><strong>Duración del Arrendamiento (Lease)</strong>: Las direcciones IP se asignan a los dispositivos solo por un período de tiempo, después del cual el dispositivo debe renovar su dirección IP o recibir una nueva.</p>
+</li>
+<li>
+<p><strong>Configuración de otros parámetros de red</strong>: Además de las direcciones IP, el DHCP también puede proporcionar:</p>
+</li>
+<li><strong>Máscara de subred</strong>.</li>
+<li><strong>Puerta de enlace predeterminada (gateway)</strong>.</li>
+<li><strong>Servidores DNS</strong>.</li>
+<li>
+<p><strong>Servidores WINS</strong>.</p>
+</li>
+<li>
+<p><strong>Reservas de IP</strong>: Puedes asignar una dirección IP específica a un dispositivo concreto (como un servidor o impresora) basado en su dirección MAC, asegurando que siempre reciba la misma dirección.</p>
+</li>
+<li>
+<p><strong>Rangos de IP (Scope)</strong>: Se definen rangos de direcciones IP que el servidor DHCP puede asignar a los dispositivos en la red.</p>
+</li>
+<li>
+<p><strong>Multicast y configuración de DHCP para IPv6</strong>: Además de trabajar con direcciones IPv4, DHCP Server puede configurarse para funcionar con direcciones IPv6.</p>
+</li>
+</ol>
+<h4 id="aplicaciones-comunes_1"><strong>Aplicaciones Comunes:</strong></h4>
+<ul>
+<li>Asignación automática de direcciones IP a PCs, laptops, móviles, impresoras, y otros dispositivos de la red.</li>
+<li>Simplificación de la administración de redes grandes o medianas, eliminando la necesidad de configuraciones manuales.</li>
+<li>Gestión centralizada de la asignación de direcciones IP y otros parámetros de red.</li>
+</ul>
+<h3 id="44-file-and-storage-services"><strong>4.4 File and Storage Services</strong></h3>
+<p>El rol de <strong>File and Storage Services</strong> permite que el servidor funcione como un administrador central de almacenamiento y compartición de archivos en la red. Es uno de los roles más utilizados en las redes empresariales, ya que permite almacenar y compartir archivos de manera segura y eficiente.</p>
+<h4 id="caracteristicas-claves_3"><strong>Características Claves:</strong></h4>
+<ol>
+<li>
+<p><strong>Compartición de Archivos</strong>: Permite compartir carpetas y archivos en la red, facilitando el acceso a datos desde diferentes dispositivos.</p>
+</li>
+<li>
+<p><strong>Administración de Almacenamiento</strong>:</p>
+</li>
+<li>Gestiona discos duros y unidades de almacenamiento, permitiendo la creación y administración de volúmenes, particiones, y discos.</li>
+<li>
+<p>Soporte para discos locales, discos compartidos, y unidades conectadas por red (NAS, SAN).</p>
+</li>
+<li>
+<p><strong>Sistema de Archivos NTFS y ReFS</strong>: File and Storage Services utiliza sistemas de archivos como <strong>NTFS</strong> (New Technology File System) y <strong>ReFS</strong> (Resilient File System), que proporcionan características avanzadas como:</p>
+</li>
+<li>Permisos de archivo avanzados (ACLs).</li>
+<li>Compresión y cifrado de archivos.</li>
+<li>Soporte para grandes volúmenes de datos.</li>
+<li>
+<p>Recuperación de errores (en el caso de ReFS).</p>
+</li>
+<li>
+<p><strong>Administración de cuotas</strong>: Los administradores pueden establecer límites de almacenamiento (cuotas) en los volúmenes compartidos para controlar cuánto espacio en disco puede usar un usuario o grupo.</p>
+</li>
+<li>
+<p><strong>Servicios de Volumen Shadow Copy (VSS)</strong>: Permite realizar copias de seguridad en tiempo real de los archivos compartidos, y permite a los usuarios recuperar versiones anteriores de archivos sin necesidad de un administrador.</p>
+</li>
+<li>
+<p><strong>DFS (Distributed File System)</strong>: Un sistema que permite la creación de un espacio de nombres unificado para compartir archivos distribuidos en varios servidores físicos, lo que proporciona redundancia y mejora la disponibilidad.</p>
+</li>
+</ol>
+<h4 id="aplicaciones-comunes_2"><strong>Aplicaciones Comunes:</strong></h4>
+<ul>
+<li>Compartir archivos entre los usuarios de la red.</li>
+<li>Gestionar el almacenamiento centralizado de documentos, datos y recursos de trabajo.</li>
+<li>Implementar soluciones de alta disponibilidad y redundancia en entornos empresariales.</li>
+</ul>
+<h3 id="45-agregar-roles-y-caracteristicas"><strong>4.5 Agregar Roles y Características</strong></h3>
+<p>Vamos a configurar roles, usuarios, grupos, equipos y cómo integrarlos en una actividad práctica para poner en práctica estos conceptos en un entorno Windows Server. A continuación, se detalla el cómo gestionar un servidor y los elementos más comunes en un entorno de red.</p>
+<h4 id="paso-1-instalacion-de-roles-en-windows-server-2019"><strong>Paso 1: Instalación de Roles en Windows Server 2019</strong></h4>
+<p>Antes de poder configurar usuarios, grupos y equipos, debemos instalar los roles necesarios. El principal rol que vamos a instalar es <strong>Active Directory Domain Services (AD DS)</strong>, que permitirá crear y gestionar un dominio, junto con <strong>DNS</strong> y <strong>DHCP</strong> para la resolución de nombres y asignación automática de IPs.</p>
+<h5 id="11-instalar-el-rol-de-active-directory-domain-services-ad-ds"><strong>1.1. Instalar el rol de Active Directory Domain Services (AD DS)</strong></h5>
+<ol>
+<li>Abre el <strong>Administrador del Servidor</strong>.</li>
+<li>Haz clic en <strong>Agregar roles y características</strong>.</li>
+<li>En la ventana del asistente, selecciona <strong>Instalación basada en características o en roles</strong> y haz clic en <strong>Siguiente</strong>.</li>
+<li>Selecciona el servidor local y haz clic en <strong>Siguiente</strong>.</li>
+<li>En la lista de roles, selecciona <strong>Active Directory Domain Services</strong> y acepta todas las características necesarias. Haz clic en <strong>Siguiente</strong>.</li>
+<li>Revisa la información y haz clic en <strong>Instalar</strong>.</li>
+<li>Cuando termine la instalación, haz clic en <strong>Cerrar</strong>.</li>
+</ol>
+<h5 id="12-promover-el-servidor-a-controlador-de-dominio"><strong>1.2. Promover el servidor a controlador de dominio</strong></h5>
+<ol>
+<li>En el <strong>Administrador del Servidor</strong>, haz clic en el icono de notificaciones (en la parte superior derecha) y selecciona <strong>Promover este servidor a controlador de dominio</strong>.</li>
+<li>Selecciona <strong>Agregar un nuevo bosque</strong> (si no tienes un dominio existente) y proporciona un nombre de dominio, como <strong>empresa.local</strong>.</li>
+<li>En la siguiente pantalla, selecciona el <strong>Nivel funcional del bosque y dominio</strong> (deja en Windows Server 2016 o superior) y marca la opción <strong>Servidor DNS</strong>.</li>
+<li>Proporciona una contraseña de recuperación de servicios de directorio (anótala) y haz clic en <strong>Siguiente</strong>.</li>
+<li>Completa el asistente y reinicia el servidor cuando se te indique.</li>
+</ol>
+<h4 id="paso-2-configuracion-de-usuarios-grupos-y-equipos-en-active-directory"><strong>Paso 2: Configuración de Usuarios, Grupos y Equipos en Active Directory</strong></h4>
+<p>Una vez que el servidor ha sido promovido a controlador de dominio, puedes empezar a crear usuarios, grupos y equipos en el dominio. </p>
+<h5 id="21-crear-usuarios-en-active-directory"><strong>2.1. Crear usuarios en Active Directory</strong></h5>
+<ol>
+<li>Abre <strong>Herramientas Administrativas</strong> y selecciona <strong>Usuarios y Equipos de Active Directory</strong>.</li>
+<li>En el panel izquierdo, selecciona el nombre de tu dominio (por ejemplo, <strong>empresa.local</strong>).</li>
+<li>Haz clic derecho en <strong>Usuarios</strong> o en una <strong>Unidad Organizativa (OU)</strong> previamente creada (puedes crear OUs nuevas si lo deseas para organizar mejor los usuarios) y selecciona <strong>Nuevo &gt; Usuario</strong>.</li>
+<li>Completa los campos de información del usuario como <strong>Nombre</strong>, <strong>Apellido</strong> y <strong>Nombre de usuario</strong>.</li>
+<li>Establece una contraseña y marca la opción <strong>El usuario debe cambiar la contraseña en el próximo inicio de sesión</strong> si lo deseas.</li>
+<li>Haz clic en <strong>Siguiente</strong> y luego en <strong>Finalizar</strong>.</li>
+</ol>
+<h5 id="22-crear-grupos-en-active-directory"><strong>2.2. Crear grupos en Active Directory</strong></h5>
+<ol>
+<li>En la consola de <strong>Usuarios y Equipos de Active Directory</strong>, haz clic derecho en <strong>Usuarios</strong> o en una OU específica y selecciona <strong>Nuevo &gt; Grupo</strong>.</li>
+<li>Nombra el grupo, por ejemplo, <strong>Marketing</strong>, <strong>Ventas</strong> o <strong>IT</strong>.</li>
+<li>Selecciona el <strong>Ámbito de grupo</strong> (Generalmente <strong>Global</strong>) y el <strong>Tipo de grupo</strong> (Generalmente <strong>Distribución</strong> o <strong>Seguridad</strong>, siendo Seguridad el más usado para permisos).</li>
+<li>Haz clic en <strong>Aceptar</strong>.</li>
+</ol>
+<h5 id="23-crear-equipos-y-agregarlos-al-dominio"><strong>2.3. Crear equipos y agregarlos al dominio</strong></h5>
+<ol>
+<li>Inicia el equipo (puede ser una máquina virtual) con <strong>Windows 10</strong> o cualquier otro SO cliente.</li>
+<li>Abre el <strong>Explorador de archivos</strong>, haz clic derecho en <strong>Este equipo</strong> y selecciona <strong>Propiedades</strong>.</li>
+<li>Haz clic en <strong>Cambiar configuración</strong> y luego en <strong>Cambiar</strong>.</li>
+<li>Selecciona <strong>Dominio</strong> e introduce el nombre de tu dominio (por ejemplo, <strong>empresa.local</strong>).</li>
+<li>Proporciona las credenciales de administrador del dominio.</li>
+<li>Reinicia el equipo.</li>
+<li>En Active Directory, podrás ver el equipo en la carpeta <strong>Computers</strong>.</li>
+</ol>
+<h4 id="paso-3-configuracion-de-permisos-y-asignacion-de-grupos-a-carpetas-compartidas"><strong>Paso 3: Configuración de Permisos y Asignación de Grupos a Carpetas Compartidas</strong></h4>
+<h5 id="31-compartir-una-carpeta-en-el-servidor"><strong>3.1. Compartir una carpeta en el servidor</strong></h5>
+<ol>
+<li>En el <strong>Explorador de archivos</strong> del servidor, crea una carpeta (por ejemplo, <strong>RecursosCompartidos</strong>).</li>
+<li>Haz clic derecho en la carpeta y selecciona <strong>Propiedades</strong>.</li>
+<li>Ve a la pestaña <strong>Compartir</strong> y haz clic en <strong>Compartir</strong>.</li>
+<li>En el cuadro de diálogo, agrega los usuarios o grupos que deberían tener acceso a la carpeta.</li>
+<li>Define los permisos (lectura, escritura, etc.) y haz clic en <strong>Compartir</strong>.</li>
+<li>Asegúrate de que la carpeta sea accesible desde los equipos del dominio (puedes acceder a ella desde un equipo cliente mediante <code>\\nombre_servidor\RecursosCompartidos</code>).</li>
+</ol>
+<h5 id="32-asignar-permisos-de-seguridad-avanzados"><strong>3.2. Asignar permisos de seguridad avanzados</strong></h5>
+<ol>
+<li>Ve a la pestaña <strong>Seguridad</strong> de la carpeta.</li>
+<li>Haz clic en <strong>Editar</strong> y luego en <strong>Agregar</strong> para añadir usuarios o grupos.</li>
+<li>Establece permisos como <strong>Control total</strong>, <strong>Modificar</strong>, <strong>Leer</strong> o <strong>Escribir</strong> según las necesidades de tu red.</li>
+</ol>
+<h4 id="paso-4-configurar-directivas-de-grupo-gpo"><strong>Paso 4: Configurar Directivas de Grupo (GPO)</strong></h4>
+<p>Las <strong>Directivas de Grupo (GPO)</strong> son un conjunto de configuraciones que se aplican a nivel de usuarios o equipos dentro del dominio. A continuación, se muestra cómo crear una política básica.</p>
+<h5 id="41-crear-una-directiva-de-grupo"><strong>4.1. Crear una Directiva de Grupo</strong></h5>
+<ol>
+<li>Abre <strong>Herramientas Administrativas</strong> y selecciona <strong>Administrador de directivas de grupo</strong>.</li>
+<li>En el árbol de la izquierda, selecciona tu dominio (por ejemplo, <strong>empresa.local</strong>).</li>
+<li>Haz clic derecho en <strong>Objetos de directiva de grupo</strong> y selecciona <strong>Nuevo</strong>.</li>
+<li>Dale un nombre a tu nueva GPO (por ejemplo, <strong>Deshabilitar pantalla de bloqueo</strong>).</li>
+<li>Haz clic derecho sobre la GPO creada y selecciona <strong>Editar</strong>.</li>
+</ol>
+<h5 id="42-aplicar-una-configuracion-mediante-gpo"><strong>4.2. Aplicar una configuración mediante GPO</strong></h5>
+<ol>
+<li>Navega a la configuración deseada, por ejemplo:</li>
+<li>Para deshabilitar la pantalla de bloqueo de los equipos clientes, ve a <strong>Configuración de usuario &gt; Plantillas administrativas &gt; Panel de control &gt; Personalización</strong>.</li>
+<li>Activa la política que dice <strong>No mostrar la pantalla de bloqueo</strong>.</li>
+<li>Una vez que hayas editado la GPO, puedes vincularla a una OU o a todo el dominio. Haz clic derecho en la OU o dominio donde deseas aplicarla y selecciona <strong>Vincular un GPO existente</strong>.</li>
+</ol>
+<h2 id="5-configurar-firewall"><strong>5. Configurar Firewall</strong></h2>
+<p>Windows Server 2019 tiene habilitado el firewall por defecto, lo cual es útil para la seguridad, pero puede requerir ajustes dependiendo de los roles instalados.</p>
+<h3 id="51-configuracion-del-firewall"><strong>5.1. Configuración del Firewall</strong></h3>
+<ol>
+<li>
+<p>Abre el <strong>Administrador del servidor</strong> y selecciona <strong>Herramientas</strong> &gt; <strong>Firewall de Windows con seguridad avanzada</strong>.</p>
+</li>
+<li>
+<p>Aquí puedes configurar las reglas de entrada y salida según los servicios que hayas instalado. Por ejemplo, si configuraste un servidor web, asegúrate de que el puerto 80 (HTTP) y el puerto 443 (HTTPS) estén abiertos.</p>
+</li>
+</ol>
+<h2 id="6-activar-windows-server-2019"><strong>6. Activar Windows Server 2019</strong></h2>
+<p>Aunque estés usando la versión de evaluación de 180 días, puedes activarla para acceder a todas las características.</p>
+<h3 id="61-activacion"><strong>6.1. Activación</strong></h3>
+<ol>
+<li>
+<p>Ve a <strong>Inicio</strong> &gt; <strong>Configuración</strong> &gt; <strong>Actualización y seguridad</strong> &gt; <strong>Activación</strong>.</p>
+</li>
+<li>
+<p>Haz clic en <strong>Cambiar clave de producto</strong> e ingresa la clave de activación si la tienes. Si no, puedes continuar utilizando la versión de evaluación.</p>
+</li>
+</ol>
+<h2 id="7-configuracion-de-escritorio-remoto-opcional"><strong>7. Configuración de Escritorio Remoto (opcional)</strong></h2>
+<p>Si quieres administrar el servidor remotamente, es útil habilitar el escritorio remoto.</p>
+<h3 id="71-habilitar-escritorio-remoto"><strong>7.1. Habilitar Escritorio Remoto</strong></h3>
+<ol>
+<li>
+<p>En <strong>Servidor Local</strong>, haz clic en <strong>Deshabilitado</strong> junto a <strong>Escritorio remoto</strong>.</p>
+</li>
+<li>
+<p>En la ventana emergente, selecciona <strong>Permitir conexiones remotas a este equipo</strong> y haz clic en <strong>Aceptar</strong>.</p>
+</li>
+<li>
+<p>Asegúrate de que el firewall permita conexiones de escritorio remoto.</p>
+</li>
+</ol>
+<div class="admonition info">
+<p class="admonition-title">En resumen</p>
+<p>Siguiendo estos pasos, tendréis un servidor Windows Server 2019 correctamente configurado para empezar a gestionar redes, dominios, usuarios, y demás servicios. Una vez completada la configuración inicial, podrán explorar más a fondo las características del servidor y agregar roles adicionales según lo necesiten.</p>
+</div>
 
 
 
