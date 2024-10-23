@@ -300,3 +300,133 @@ Si quieres administrar el servidor remotamente, es útil habilitar el escritorio
 
 !!!info "En resumen"
     Siguiendo estos pasos, tendréis un servidor Windows Server 2019 correctamente configurado para empezar a gestionar redes, dominios, usuarios, y demás servicios. Una vez completada la configuración inicial, podrán explorar más a fondo las características del servidor y agregar roles adicionales según lo necesiten.
+
+---
+
+## **📚 8. Teoría sobre gestión de usuarios y grupos**
+![Sistemas](assets/2-user-group.png){align="right"}
+
+Ahora que ya sabemos cómo instalar y gestionar el sistema operativo, vayamos a la parte de teoría. Este apartado de **gestión de usuarios y grupos** se centrará en cómo gestionar los usuarios, grupos y equipos dentro de un sistema operativo en red. A lo largo del tema, aprenderemos a crear, modificar y eliminar cuentas de usuario, así como a organizar usuarios en grupos para facilitar la administración y aplicar políticas de seguridad. Este tema es crucial para asegurar que los recursos del sistema estén protegidos y accesibles solo para aquellos que tienen permisos adecuados. También exploraremos la creación de perfiles de usuario y cómo gestionar cuentas de equipos en un entorno de red empresarial.
+
+La gestión de usuarios y grupos es una de las tareas fundamentales en la administración de sistemas operativos en red. Al configurar una red, se deben gestionar tanto los usuarios que acceden a los sistemas como los permisos y privilegios que tienen para acceder a recursos. En este tema, vamos a detallar cómo gestionar cuentas de usuario, crear y administrar grupos, configurar perfiles de usuario, y explorar el uso de herramientas administrativas incluidas en sistemas operativos como **Windows Server**.
+
+### **8.1 Conceptos Básicos sobre Usuarios y Grupos**
+
+**Usuarios**
+En un sistema operativo en red, un **usuario** es una identidad que puede iniciar sesión en el sistema, realizar tareas y acceder a recursos. Cada usuario tiene un perfil y una serie de permisos y restricciones.
+
+**Tipos de usuarios**
+- **Usuarios locales**: Solo tienen acceso al sistema en el que están registrados.
+- **Usuarios de dominio**: Pueden iniciar sesión en cualquier equipo de la red que forme parte de un dominio.
+- **Usuarios invitados**: Tienen acceso limitado y normalmente no pueden hacer cambios permanentes.
+
+**Ejemplo en Windows Server 2019: Crear un Usuario**
+1. En **Administrador del servidor**, selecciona **Herramientas** > **Usuarios y equipos de Active Directory**.
+2. Haz clic derecho sobre la **Unidad Organizativa (OU)** deseada y selecciona **Nuevo** > **Usuario**.
+3. Introduce el nombre de usuario, inicio de sesión y contraseña.
+4. Configura las opciones para el usuario, como "El usuario debe cambiar la contraseña en el siguiente inicio de sesión".
+5. Haz clic en **Finalizar**.
+
+!!!note "Resultado"
+      Un nuevo usuario ha sido creado y puede iniciar sesión en los equipos del dominio.
+
+**Grupos**
+Los **grupos** permiten gestionar varios usuarios como una sola entidad. Los permisos y derechos asignados a un grupo se aplican automáticamente a todos los miembros de ese grupo.
+
+**Tipos de Grupos**
+- **Grupos de seguridad**: Permiten aplicar permisos de acceso a recursos (como carpetas, impresoras, etc.).
+- **Grupos de distribución**: Utilizados para distribuir correos electrónicos o mensajes a varios usuarios.
+
+**Ejemplo en Windows Server 2019: Crear un Grupo**
+1. En **Administrador del servidor**, selecciona **Herramientas** > **Usuarios y equipos de Active Directory**.
+2. Navega hasta la OU donde quieras crear el grupo.
+3. Haz clic derecho y selecciona **Nuevo** > **Grupo**.
+4. Elige un nombre para el grupo, y selecciona si será un grupo de **seguridad** o **distribución**.
+5. Selecciona el **ámbito** del grupo (dominio local, global, universal).
+6. Haz clic en **Aceptar**.
+
+!!!note "Resultado"
+      El nuevo grupo estará disponible para que puedas agregar usuarios y aplicar permisos.
+
+### **8.2 Gestión de Cuentas de Usuario**
+
+Una vez que se han creado los usuarios, es importante gestionar sus cuentas. La **gestión de cuentas de usuario** incluye la modificación de detalles del perfil, administración de contraseñas y la asignación de derechos de acceso.
+
+**Acciones comunes en la gestión de cuentas de usuario:**
+- **Restablecer contraseñas**: Una de las tareas más comunes es restablecer las contraseñas cuando un usuario la ha olvidado.
+- **Deshabilitar cuentas**: Al finalizar la relación laboral de un empleado, puede ser necesario deshabilitar su cuenta en lugar de eliminarla.
+- **Configurar expiración de cuentas**: Las cuentas temporales se configuran para expirar automáticamente después de un período específico.
+
+**Ejemplo: Restablecer la contraseña de un usuario**
+1. En **Usuarios y equipos de Active Directory**, localiza al usuario.
+2. Haz clic derecho sobre el usuario y selecciona **Restablecer contraseña**.
+3. Introduce la nueva contraseña y marca la casilla si deseas que el usuario cambie su contraseña en el próximo inicio de sesión.
+4. Haz clic en **Aceptar**.
+
+!!!note "Resultado"
+      La contraseña del usuario ha sido restablecida.
+
+
+### **8.3 Configuración y Gestión de Perfiles de Usuario**
+
+Los perfiles de usuario contienen toda la información relacionada con la configuración del entorno de trabajo de un usuario, como el escritorio, configuraciones de aplicaciones y archivos personales. En un entorno de red, los perfiles de usuario pueden ser:
+
+- **Perfiles locales**: Cada usuario tiene un perfil en cada equipo en el que inicia sesión.
+- **Perfiles móviles**: El perfil del usuario se guarda en el servidor, lo que permite al usuario acceder a su mismo entorno desde cualquier equipo en la red.
+
+**Ejemplo: Crear un perfil móvil de usuario**
+1. En **Usuarios y equipos de Active Directory**, selecciona el usuario deseado.
+2. Haz clic derecho y selecciona **Propiedades**.
+3. Ve a la pestaña **Perfil** y, en la sección **Ruta de acceso del perfil**, introduce la ruta donde se almacenará el perfil, por ejemplo: `\\servidor\perfiles\usuario`.
+4. Haz clic en **Aceptar**.
+
+!!!note "Resultado"
+      El perfil del usuario ahora se guardará en el servidor, permitiendo la movilidad en diferentes equipos.
+
+### **8.4 Configuración de Grupos en el Entorno de Red**
+
+El uso de grupos es fundamental para simplificar la administración de permisos. En lugar de asignar permisos a cada usuario individualmente, los permisos se asignan a los grupos, y los usuarios que pertenecen a esos grupos heredan automáticamente los permisos.
+
+**Ejemplo: Asignar usuarios a un grupo**
+1. En **Usuarios y equipos de Active Directory**, localiza el grupo deseado.
+2. Haz clic derecho sobre el grupo y selecciona **Propiedades**.
+3. Ve a la pestaña **Miembros** y haz clic en **Agregar**.
+4. Selecciona los usuarios que quieres agregar al grupo y haz clic en **Aceptar**.
+
+!!!note "Resultado"
+      Los usuarios seleccionados ahora forman parte del grupo y tendrán los permisos asignados a ese grupo.
+
+### **8.5 Gestión de Cuentas de Equipos**
+
+En una red, no solo los usuarios tienen cuentas; los **equipos** también cuentan con una identidad en Active Directory. Cada equipo que forma parte de un dominio tiene una cuenta asociada que se utiliza para la autenticación y la seguridad.
+
+**Ejemplo: Agregar un equipo al dominio**
+1. En el equipo que deseas agregar al dominio, haz clic derecho sobre **Este equipo** y selecciona **Propiedades**.
+2. Haz clic en **Cambiar configuración** > **Cambiar**.
+3. En **Miembro de**, selecciona **Dominio** y escribe el nombre del dominio.
+4. Introduce las credenciales de administrador del dominio y haz clic en **Aceptar**.
+5. Reinicia el equipo para que los cambios surtan efecto.
+
+!!!note "Resultado"
+      El equipo ahora forma parte del dominio y puede gestionarse desde Active Directory.
+
+---
+
+### **8.6. Herramientas de Administración de Usuarios y Grupos**
+
+En **Windows Server 2019**, las principales herramientas para gestionar usuarios y grupos son:
+
+- **Usuarios y Equipos de Active Directory**: Para gestionar cuentas de usuario, grupos y equipos en el dominio.
+- **Consola de administración de directivas de grupo (GPMC)**: Para gestionar políticas de seguridad que se aplican a usuarios y equipos.
+- **PowerShell**: Utilizado para la administración avanzada y automatización.
+
+##### **Ejemplo: Crear un usuario usando PowerShell**
+1. Abre **PowerShell** como administrador.
+2. Escribe el siguiente comando para crear un usuario:
+   ```powershell
+   New-ADUser -Name "Juan Perez" -SamAccountName jperez -UserPrincipalName jperez@dominio.com -Path "OU=Usuarios,DC=dominio,DC=com" -AccountPassword (ConvertTo-SecureString "Contraseña123" -AsPlainText -Force) -Enabled $true
+   ```
+3. El usuario se creará y estará habilitado.
+
+!!!note "Resultado"
+      Se ha creado un nuevo usuario en Active Directory usando PowerShell.
