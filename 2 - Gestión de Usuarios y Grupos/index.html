@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../assets/logo.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.34">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.42">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.35f28582.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.0253249f.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
@@ -786,6 +786,90 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#8-teoria-sobre-gestion-de-usuarios-y-grupos" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 8. Teoría sobre gestión de usuarios y grupos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📚 8. Teoría sobre gestión de usuarios y grupos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-conceptos-basicos-sobre-usuarios-y-grupos" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.1 Conceptos Básicos sobre Usuarios y Grupos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#82-gestion-de-cuentas-de-usuario" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.2 Gestión de Cuentas de Usuario
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#83-configuracion-y-gestion-de-perfiles-de-usuario" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.3 Configuración y Gestión de Perfiles de Usuario
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#84-configuracion-de-grupos-en-el-entorno-de-red" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.4 Configuración de Grupos en el Entorno de Red
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#85-gestion-de-cuentas-de-equipos" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.5 Gestión de Cuentas de Equipos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#86-herramientas-de-administracion-de-usuarios-y-grupos" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.6. Herramientas de Administración de Usuarios y Grupos
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8.6. Herramientas de Administración de Usuarios y Grupos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-crear-un-usuario-usando-powershell" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo: Crear un usuario usando PowerShell
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1253,6 +1337,117 @@
 <p class="admonition-title">En resumen</p>
 <p>Siguiendo estos pasos, tendréis un servidor Windows Server 2019 correctamente configurado para empezar a gestionar redes, dominios, usuarios, y demás servicios. Una vez completada la configuración inicial, podrán explorar más a fondo las características del servidor y agregar roles adicionales según lo necesiten.</p>
 </div>
+<hr />
+<h2 id="8-teoria-sobre-gestion-de-usuarios-y-grupos"><strong>📚 8. Teoría sobre gestión de usuarios y grupos</strong></h2>
+<p><img align="right" alt="Sistemas" src="../assets/2-user-group.png" /></p>
+<p>Ahora que ya sabemos cómo instalar y gestionar el sistema operativo, vayamos a la parte de teoría. Este apartado de <strong>gestión de usuarios y grupos</strong> se centrará en cómo gestionar los usuarios, grupos y equipos dentro de un sistema operativo en red. A lo largo del tema, aprenderemos a crear, modificar y eliminar cuentas de usuario, así como a organizar usuarios en grupos para facilitar la administración y aplicar políticas de seguridad. Este tema es crucial para asegurar que los recursos del sistema estén protegidos y accesibles solo para aquellos que tienen permisos adecuados. También exploraremos la creación de perfiles de usuario y cómo gestionar cuentas de equipos en un entorno de red empresarial.</p>
+<p>La gestión de usuarios y grupos es una de las tareas fundamentales en la administración de sistemas operativos en red. Al configurar una red, se deben gestionar tanto los usuarios que acceden a los sistemas como los permisos y privilegios que tienen para acceder a recursos. En este tema, vamos a detallar cómo gestionar cuentas de usuario, crear y administrar grupos, configurar perfiles de usuario, y explorar el uso de herramientas administrativas incluidas en sistemas operativos como <strong>Windows Server</strong>.</p>
+<h3 id="81-conceptos-basicos-sobre-usuarios-y-grupos"><strong>8.1 Conceptos Básicos sobre Usuarios y Grupos</strong></h3>
+<p><strong>Usuarios</strong>
+En un sistema operativo en red, un <strong>usuario</strong> es una identidad que puede iniciar sesión en el sistema, realizar tareas y acceder a recursos. Cada usuario tiene un perfil y una serie de permisos y restricciones.</p>
+<p><strong>Tipos de usuarios</strong>
+- <strong>Usuarios locales</strong>: Solo tienen acceso al sistema en el que están registrados.
+- <strong>Usuarios de dominio</strong>: Pueden iniciar sesión en cualquier equipo de la red que forme parte de un dominio.
+- <strong>Usuarios invitados</strong>: Tienen acceso limitado y normalmente no pueden hacer cambios permanentes.</p>
+<p><strong>Ejemplo en Windows Server 2019: Crear un Usuario</strong>
+1. En <strong>Administrador del servidor</strong>, selecciona <strong>Herramientas</strong> &gt; <strong>Usuarios y equipos de Active Directory</strong>.
+2. Haz clic derecho sobre la <strong>Unidad Organizativa (OU)</strong> deseada y selecciona <strong>Nuevo</strong> &gt; <strong>Usuario</strong>.
+3. Introduce el nombre de usuario, inicio de sesión y contraseña.
+4. Configura las opciones para el usuario, como "El usuario debe cambiar la contraseña en el siguiente inicio de sesión".
+5. Haz clic en <strong>Finalizar</strong>.</p>
+<div class="admonition note">
+<p class="admonition-title">Resultado</p>
+<p>Un nuevo usuario ha sido creado y puede iniciar sesión en los equipos del dominio.</p>
+</div>
+<p><strong>Grupos</strong>
+Los <strong>grupos</strong> permiten gestionar varios usuarios como una sola entidad. Los permisos y derechos asignados a un grupo se aplican automáticamente a todos los miembros de ese grupo.</p>
+<p><strong>Tipos de Grupos</strong>
+- <strong>Grupos de seguridad</strong>: Permiten aplicar permisos de acceso a recursos (como carpetas, impresoras, etc.).
+- <strong>Grupos de distribución</strong>: Utilizados para distribuir correos electrónicos o mensajes a varios usuarios.</p>
+<p><strong>Ejemplo en Windows Server 2019: Crear un Grupo</strong>
+1. En <strong>Administrador del servidor</strong>, selecciona <strong>Herramientas</strong> &gt; <strong>Usuarios y equipos de Active Directory</strong>.
+2. Navega hasta la OU donde quieras crear el grupo.
+3. Haz clic derecho y selecciona <strong>Nuevo</strong> &gt; <strong>Grupo</strong>.
+4. Elige un nombre para el grupo, y selecciona si será un grupo de <strong>seguridad</strong> o <strong>distribución</strong>.
+5. Selecciona el <strong>ámbito</strong> del grupo (dominio local, global, universal).
+6. Haz clic en <strong>Aceptar</strong>.</p>
+<div class="admonition note">
+<p class="admonition-title">Resultado</p>
+<p>El nuevo grupo estará disponible para que puedas agregar usuarios y aplicar permisos.</p>
+</div>
+<h3 id="82-gestion-de-cuentas-de-usuario"><strong>8.2 Gestión de Cuentas de Usuario</strong></h3>
+<p>Una vez que se han creado los usuarios, es importante gestionar sus cuentas. La <strong>gestión de cuentas de usuario</strong> incluye la modificación de detalles del perfil, administración de contraseñas y la asignación de derechos de acceso.</p>
+<p><strong>Acciones comunes en la gestión de cuentas de usuario:</strong>
+- <strong>Restablecer contraseñas</strong>: Una de las tareas más comunes es restablecer las contraseñas cuando un usuario la ha olvidado.
+- <strong>Deshabilitar cuentas</strong>: Al finalizar la relación laboral de un empleado, puede ser necesario deshabilitar su cuenta en lugar de eliminarla.
+- <strong>Configurar expiración de cuentas</strong>: Las cuentas temporales se configuran para expirar automáticamente después de un período específico.</p>
+<p><strong>Ejemplo: Restablecer la contraseña de un usuario</strong>
+1. En <strong>Usuarios y equipos de Active Directory</strong>, localiza al usuario.
+2. Haz clic derecho sobre el usuario y selecciona <strong>Restablecer contraseña</strong>.
+3. Introduce la nueva contraseña y marca la casilla si deseas que el usuario cambie su contraseña en el próximo inicio de sesión.
+4. Haz clic en <strong>Aceptar</strong>.</p>
+<div class="admonition note">
+<p class="admonition-title">Resultado</p>
+<p>La contraseña del usuario ha sido restablecida.</p>
+</div>
+<h3 id="83-configuracion-y-gestion-de-perfiles-de-usuario"><strong>8.3 Configuración y Gestión de Perfiles de Usuario</strong></h3>
+<p>Los perfiles de usuario contienen toda la información relacionada con la configuración del entorno de trabajo de un usuario, como el escritorio, configuraciones de aplicaciones y archivos personales. En un entorno de red, los perfiles de usuario pueden ser:</p>
+<ul>
+<li><strong>Perfiles locales</strong>: Cada usuario tiene un perfil en cada equipo en el que inicia sesión.</li>
+<li><strong>Perfiles móviles</strong>: El perfil del usuario se guarda en el servidor, lo que permite al usuario acceder a su mismo entorno desde cualquier equipo en la red.</li>
+</ul>
+<p><strong>Ejemplo: Crear un perfil móvil de usuario</strong>
+1. En <strong>Usuarios y equipos de Active Directory</strong>, selecciona el usuario deseado.
+2. Haz clic derecho y selecciona <strong>Propiedades</strong>.
+3. Ve a la pestaña <strong>Perfil</strong> y, en la sección <strong>Ruta de acceso del perfil</strong>, introduce la ruta donde se almacenará el perfil, por ejemplo: <code>\\servidor\perfiles\usuario</code>.
+4. Haz clic en <strong>Aceptar</strong>.</p>
+<div class="admonition note">
+<p class="admonition-title">Resultado</p>
+<p>El perfil del usuario ahora se guardará en el servidor, permitiendo la movilidad en diferentes equipos.</p>
+</div>
+<h3 id="84-configuracion-de-grupos-en-el-entorno-de-red"><strong>8.4 Configuración de Grupos en el Entorno de Red</strong></h3>
+<p>El uso de grupos es fundamental para simplificar la administración de permisos. En lugar de asignar permisos a cada usuario individualmente, los permisos se asignan a los grupos, y los usuarios que pertenecen a esos grupos heredan automáticamente los permisos.</p>
+<p><strong>Ejemplo: Asignar usuarios a un grupo</strong>
+1. En <strong>Usuarios y equipos de Active Directory</strong>, localiza el grupo deseado.
+2. Haz clic derecho sobre el grupo y selecciona <strong>Propiedades</strong>.
+3. Ve a la pestaña <strong>Miembros</strong> y haz clic en <strong>Agregar</strong>.
+4. Selecciona los usuarios que quieres agregar al grupo y haz clic en <strong>Aceptar</strong>.</p>
+<div class="admonition note">
+<p class="admonition-title">Resultado</p>
+<p>Los usuarios seleccionados ahora forman parte del grupo y tendrán los permisos asignados a ese grupo.</p>
+</div>
+<h3 id="85-gestion-de-cuentas-de-equipos"><strong>8.5 Gestión de Cuentas de Equipos</strong></h3>
+<p>En una red, no solo los usuarios tienen cuentas; los <strong>equipos</strong> también cuentan con una identidad en Active Directory. Cada equipo que forma parte de un dominio tiene una cuenta asociada que se utiliza para la autenticación y la seguridad.</p>
+<p><strong>Ejemplo: Agregar un equipo al dominio</strong>
+1. En el equipo que deseas agregar al dominio, haz clic derecho sobre <strong>Este equipo</strong> y selecciona <strong>Propiedades</strong>.
+2. Haz clic en <strong>Cambiar configuración</strong> &gt; <strong>Cambiar</strong>.
+3. En <strong>Miembro de</strong>, selecciona <strong>Dominio</strong> y escribe el nombre del dominio.
+4. Introduce las credenciales de administrador del dominio y haz clic en <strong>Aceptar</strong>.
+5. Reinicia el equipo para que los cambios surtan efecto.</p>
+<div class="admonition note">
+<p class="admonition-title">Resultado</p>
+<p>El equipo ahora forma parte del dominio y puede gestionarse desde Active Directory.</p>
+</div>
+<hr />
+<h3 id="86-herramientas-de-administracion-de-usuarios-y-grupos"><strong>8.6. Herramientas de Administración de Usuarios y Grupos</strong></h3>
+<p>En <strong>Windows Server 2019</strong>, las principales herramientas para gestionar usuarios y grupos son:</p>
+<ul>
+<li><strong>Usuarios y Equipos de Active Directory</strong>: Para gestionar cuentas de usuario, grupos y equipos en el dominio.</li>
+<li><strong>Consola de administración de directivas de grupo (GPMC)</strong>: Para gestionar políticas de seguridad que se aplican a usuarios y equipos.</li>
+<li><strong>PowerShell</strong>: Utilizado para la administración avanzada y automatización.</li>
+</ul>
+<h5 id="ejemplo-crear-un-usuario-usando-powershell"><strong>Ejemplo: Crear un usuario usando PowerShell</strong></h5>
+<ol>
+<li>Abre <strong>PowerShell</strong> como administrador.</li>
+<li>Escribe el siguiente comando para crear un usuario:
+   <code>powershell
+   New-ADUser -Name "Juan Perez" -SamAccountName jperez -UserPrincipalName jperez@dominio.com -Path "OU=Usuarios,DC=dominio,DC=com" -AccountPassword (ConvertTo-SecureString "Contraseña123" -AsPlainText -Force) -Enabled $true</code></li>
+<li>El usuario se creará y estará habilitado.</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Resultado</p>
+<p>Se ha creado un nuevo usuario en Active Directory usando PowerShell.</p>
+</div>
 
 
 
@@ -1356,10 +1551,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["header.autohide", "navigation.footer", "navigation.path", "navigation.sections", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.integrate"], "search": "../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["header.autohide", "navigation.footer", "navigation.path", "navigation.sections", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.integrate"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.56dfad97.min.js"></script>
+      <script src="../assets/javascripts/bundle.83f73b43.min.js"></script>
       
     
   </body>
