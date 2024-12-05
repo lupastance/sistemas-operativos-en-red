@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../assets/logo.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.34">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.42">
     
     
       
@@ -26,7 +26,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.35f28582.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.0253249f.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
@@ -325,6 +325,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    4️⃣ Gestión de Recursos Compartidos y Seguridad
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -334,6 +345,109 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-introduccion-a-los-recursos-compartidos-en-red" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Introducción a los recursos compartidos en red
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Introducción a los recursos compartidos en red">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-que-son-los-recursos-compartidos" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1. ¿Qué son los recursos compartidos?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-tipos-de-recursos-compartidos" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2. Tipos de recursos compartidos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-importancia-de-compartir-recursos" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3. Importancia de compartir recursos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-herramientas-en-windows-server-para-gestionar-recursos-compartidos" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4. Herramientas en Windows Server para gestionar recursos compartidos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ejercicios" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔰 Ejercicios
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔰 Ejercicios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ejercicios-practicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicios prácticos
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ejercicios-teoricos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejercicios teóricos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -395,6 +509,223 @@
 
 
 <h1 id="4-gestion-de-recursos-compartidos-y-seguridad">4️⃣ Gestión de Recursos Compartidos y Seguridad</h1>
+<p>En un entorno de red, la <strong>gestión eficiente de los recursos compartidos</strong> es esencial para garantizar la productividad y la seguridad de los usuarios. Este tema aborda cómo configurar, administrar y proteger los recursos compartidos, como archivos, carpetas e impresoras, dentro de un dominio. Además, se analizarán los mecanismos de seguridad necesarios para regular el acceso, asegurando que cada usuario o grupo tenga los permisos adecuados según sus necesidades y responsabilidades.</p>
+<p>La correcta <strong>configuración de permisos y políticas de seguridad</strong> no solo evita accesos no autorizados, sino que también protege la integridad y confidencialidad de los datos. Asimismo, aprenderás a monitorizar el uso de estos recursos, detectando posibles problemas y resolviéndolos de forma proactiva.</p>
+<p>A lo largo del tema, trabajarás con herramientas propias de Windows Server, como el Administrador del Servidor y el Explorador de Archivos, para configurar recursos compartidos y gestionar los niveles de acceso. También exploraremos la implementación de estrategias de seguridad avanzadas, como la auditoría y el control de acceso basado en roles (RBAC), para cumplir con las necesidades específicas de un entorno profesional.</p>
+<h3 id="1-introduccion-a-los-recursos-compartidos-en-red"><strong>1. Introducción a los recursos compartidos en red</strong></h3>
+<p>Los recursos compartidos en red son una pieza clave en la administración de sistemas operativos en red, ya que permiten a los usuarios y equipos acceder y colaborar con recursos comunes de manera eficiente. Este apartado introduce los conceptos fundamentales, tipos de recursos compartidos y las herramientas que proporciona Windows Server para gestionarlos.</p>
+<hr />
+<h4 id="11-que-son-los-recursos-compartidos"><strong>1.1. ¿Qué son los recursos compartidos?</strong></h4>
+<p>Un recurso compartido es cualquier elemento dentro de una red que se pone a disposición de varios usuarios o dispositivos para su uso. Estos recursos pueden incluir archivos, carpetas, impresoras, conexiones a Internet, bases de datos, etc. </p>
+<p>Compartir recursos en una red permite:<br />
+- <strong>Optimizar el uso de recursos</strong>: En lugar de que cada usuario tenga su propia impresora o copia de un archivo, estos se comparten y centralizan.<br />
+- <strong>Fomentar la colaboración</strong>: Los usuarios pueden trabajar simultáneamente en un entorno de red al acceder a los mismos archivos o aplicaciones.<br />
+- <strong>Centralizar la administración</strong>: Los administradores pueden gestionar el acceso, permisos y mantenimiento de recursos desde un único punto.</p>
+<hr />
+<h4 id="12-tipos-de-recursos-compartidos"><strong>1.2. Tipos de recursos compartidos</strong></h4>
+<p>En un entorno de red, los recursos compartidos más comunes son:  </p>
+<ol>
+<li><strong>Archivos y carpetas</strong>:  </li>
+<li><strong>Archivos compartidos</strong>: Documentos o aplicaciones a los que los usuarios pueden acceder desde cualquier equipo en la red.  </li>
+<li>
+<p><strong>Carpetas compartidas</strong>: Estructuras jerárquicas que contienen archivos organizados y permiten la gestión centralizada del contenido.  </p>
+</li>
+<li>
+<p><strong>Impresoras</strong>:  </p>
+</li>
+<li>
+<p>Permiten que varios usuarios envíen trabajos de impresión a través de la red, reduciendo la necesidad de dispositivos individuales.  </p>
+</li>
+<li>
+<p><strong>Unidades de red</strong>:  </p>
+</li>
+<li>
+<p>Son particiones o discos completos compartidos para proporcionar almacenamiento centralizado y accesible desde varios equipos.  </p>
+</li>
+<li>
+<p><strong>Aplicaciones y servicios</strong>:  </p>
+</li>
+<li>Software o servicios alojados en un servidor, como bases de datos o sistemas ERP, accesibles para los usuarios autorizados.  </li>
+</ol>
+<hr />
+<h4 id="13-importancia-de-compartir-recursos"><strong>1.3. Importancia de compartir recursos</strong></h4>
+<p>Compartir recursos en un entorno de red tiene ventajas significativas tanto para los usuarios como para los administradores:  </p>
+<ul>
+<li><strong>Ahorro de costes</strong>: Reducir la necesidad de hardware duplicado, como impresoras o discos duros externos.  </li>
+<li><strong>Eficiencia operativa</strong>: Facilitar el acceso a la información y mejorar la colaboración.  </li>
+<li><strong>Seguridad</strong>: Centralizar el control de acceso y permisos para garantizar que solo los usuarios autorizados accedan a los recursos.  </li>
+<li><strong>Escalabilidad</strong>: Permitir la adición de más usuarios o equipos sin afectar el rendimiento o la accesibilidad.  </li>
+</ul>
+<p>Ejemplo práctico:<br />
+En una empresa, compartir una carpeta llamada "Proyectos" permite que varios equipos colaboren en tiempo real, mientras que un administrador controla quién puede modificar o solo visualizar los documentos.  </p>
+<hr />
+<h4 id="14-herramientas-en-windows-server-para-gestionar-recursos-compartidos"><strong>1.4. Herramientas en Windows Server para gestionar recursos compartidos</strong></h4>
+<p>Windows Server incluye diversas herramientas para facilitar la gestión de recursos compartidos. Estas herramientas ofrecen interfaces gráficas y comandos para configurar, supervisar y controlar los recursos.  </p>
+<ol>
+<li><strong>Administrador del Servidor</strong>:  </li>
+<li>Una consola centralizada para añadir roles y características, como el de compartir archivos e impresoras.  </li>
+<li>
+<p>Permite configurar rápidamente carpetas compartidas y establecer permisos.  </p>
+</li>
+<li>
+<p><strong>Explorador de archivos</strong>:  </p>
+</li>
+<li>
+<p>Los recursos se pueden compartir directamente desde las propiedades de una carpeta o archivo.  </p>
+</li>
+<li>
+<p><strong>PowerShell</strong>:  </p>
+</li>
+<li>Herramienta avanzada para configurar recursos compartidos mediante comandos.  </li>
+<li>
+<p>Ejemplo:<br />
+<code>powershell
+     New-SmbShare -Name "Documentos" -Path "C:\Carpetas\Documentos" -FullAccess "GrupoUsuarios"</code></p>
+</li>
+<li>
+<p><strong>Consolas administrativas específicas</strong>:  </p>
+</li>
+<li><strong>Gestión de impresión</strong> para administrar impresoras compartidas.  </li>
+<li>
+<p><strong>Gestión de almacenamiento</strong> para compartir unidades de red.  </p>
+</li>
+<li>
+<p><strong>Directivas de grupo (GPO)</strong>:  </p>
+</li>
+<li>Permiten automatizar la configuración de recursos compartidos y asignar permisos específicos en entornos grandes.  </li>
+</ol>
+<hr />
+<h2 id="ejercicios">🔰 Ejercicios</h2>
+<ol>
+<li>
+<p>Supongamos que los alumnos gestionan una red ficticia con tres departamentos: Finanzas, Marketing y Recursos Humanos.  </p>
+</li>
+<li>
+<p><strong>Actividad 1</strong>: Crear tres carpetas en el servidor:  </p>
+</li>
+<li>Finanzas: Solo accesible para los miembros del departamento de Finanzas.  </li>
+<li>Marketing: Accesible para Marketing, pero en modo solo lectura para el resto.  </li>
+<li>
+<p>Recursos Humanos: Permitir que todos los usuarios puedan leer, pero solo el departamento de RRHH pueda modificar.  </p>
+</li>
+<li>
+<p><strong>Resultado esperado</strong>:<br />
+  Los alumnos deberán configurar las carpetas compartidas utilizando el Administrador del Servidor, asignar permisos adecuados y probar el acceso desde equipos cliente.</p>
+</li>
+</ol>
+<hr />
+<h3 id="ejercicios-practicos"><strong>Ejercicios prácticos</strong></h3>
+<ol>
+<li><strong>Crear una carpeta compartida básica</strong>  </li>
+<li>En el servidor con Windows Server, los alumnos deben crear una carpeta llamada <code>RecursosGenerales</code> en <code>C:\</code>.</li>
+<li>
+<p>Configurar esta carpeta para que sea accesible para todos los usuarios de la red en modo de solo lectura.</p>
+</li>
+<li>
+<p><strong>Configurar permisos avanzados en carpetas compartidas</strong>  </p>
+</li>
+<li>Crear una carpeta llamada <code>PrivadoFinanzas</code> y configurarla para que solo el grupo <code>Finanzas</code> tenga permisos de lectura y escritura.  </li>
+<li>
+<p>Comprobar que otros usuarios no puedan acceder.</p>
+</li>
+<li>
+<p><strong>Mapear una unidad de red</strong>  </p>
+</li>
+<li>Desde un equipo cliente, los alumnos deben mapear la carpeta compartida <code>RecursosGenerales</code> como una unidad de red (por ejemplo, Z:).  </li>
+<li>
+<p>Verificar que el contenido sea accesible.</p>
+</li>
+<li>
+<p><strong>Crear un recurso compartido para impresoras</strong>  </p>
+</li>
+<li>Instalar una impresora ficticia (impresora PDF) en el servidor.  </li>
+<li>
+<p>Compartir la impresora con la red y permitir que los equipos cliente la usen.  </p>
+</li>
+<li>
+<p><strong>Configurar múltiples niveles de acceso</strong>  </p>
+</li>
+<li>
+<p>Crear tres carpetas (<code>Marketing</code>, <code>Ventas</code>, <code>Soporte</code>) y asignar los siguientes permisos:  </p>
+<ul>
+<li><code>Marketing</code>: Lectura para todos, escritura solo para el grupo Marketing.  </li>
+<li><code>Ventas</code>: Lectura y escritura para el grupo Ventas, acceso denegado a otros.  </li>
+<li><code>Soporte</code>: Acceso completo para todos los usuarios.</li>
+</ul>
+</li>
+<li>
+<p><strong>Usar PowerShell para compartir recursos</strong>  </p>
+</li>
+<li>Configurar una carpeta compartida mediante PowerShell utilizando el siguiente comando:<br />
+<code>powershell
+     New-SmbShare -Name "EjemploPowerShell" -Path "C:\Compartido" -FullAccess "Usuarios"</code></li>
+<li>
+<p>Verificar que el recurso esté compartido.</p>
+</li>
+<li>
+<p><strong>Auditoría de acceso</strong>  </p>
+</li>
+<li>Habilitar la auditoría en una carpeta compartida (<code>/Finanzas</code>) para registrar qué usuarios acceden y modifican archivos.  </li>
+<li>
+<p>Consultar los registros de eventos en el visor de sucesos.</p>
+</li>
+<li>
+<p><strong>Configurar el acceso basado en la red</strong>  </p>
+</li>
+<li>Crear una carpeta compartida y limitar el acceso únicamente a las direcciones IP dentro de un rango específico.  </li>
+<li>
+<p>Comprobar que fuera del rango no sea accesible.</p>
+</li>
+<li>
+<p><strong>Gestión de permisos heredados</strong>  </p>
+</li>
+<li>Crear una carpeta con subcarpetas y configurar permisos diferentes para las subcarpetas eliminando la herencia en cada una de ellas.  </li>
+<li>
+<p>Documentar los pasos y verificar los accesos desde un cliente.</p>
+</li>
+<li>
+<p><strong>Configurar recursos compartidos utilizando GPO</strong>  </p>
+<ul>
+<li>Crear una política de grupo que configure automáticamente el acceso a la carpeta <code>DocumentosCorporativos</code> para todos los usuarios al iniciar sesión en los equipos cliente.  </li>
+<li>Verificar que se aplique correctamente.</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h3 id="ejercicios-teoricos"><strong>Ejercicios teóricos</strong></h3>
+<ol>
+<li>
+<p>Define qué es un recurso compartido en red y da dos ejemplos prácticos.  </p>
+</li>
+<li>
+<p>Explica las diferencias entre los tipos de permisos: <strong>Lectura</strong>, <strong>Cambios</strong> y <strong>Control total</strong> en Windows Server.  </p>
+</li>
+<li>
+<p>Enumera tres beneficios de compartir recursos en una red empresarial.  </p>
+</li>
+<li>
+<p>¿Qué herramienta de Windows Server se utiliza para compartir carpetas y administrar sus permisos?  </p>
+</li>
+<li>
+<p>¿Qué diferencia hay entre compartir una carpeta desde el <strong>Explorador de archivos</strong> y desde el <strong>Administrador del Servidor</strong>?  </p>
+</li>
+<li>
+<p>Explica el concepto de unidad de red. ¿Por qué se utiliza?  </p>
+</li>
+<li>
+<p>Describe cómo los permisos de carpeta compartida interactúan con los permisos del sistema de archivos NTFS.  </p>
+</li>
+<li>
+<p>¿Qué es una impresora compartida? ¿Qué ventajas ofrece en un entorno de oficina?  </p>
+</li>
+<li>
+<p>¿Qué riesgos de seguridad pueden existir al compartir recursos en una red?  </p>
+</li>
+<li>
+<p>Explica el proceso de configuración de auditoría para un recurso compartido. ¿Qué utilidad tiene esta función?  </p>
+</li>
+</ol>
+<hr />
 
 
 
@@ -498,10 +829,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["header.autohide", "navigation.footer", "navigation.path", "navigation.sections", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.integrate"], "search": "../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["header.autohide", "navigation.footer", "navigation.path", "navigation.sections", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest", "toc.integrate"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.56dfad97.min.js"></script>
+      <script src="../assets/javascripts/bundle.83f73b43.min.js"></script>
       
     
   </body>
