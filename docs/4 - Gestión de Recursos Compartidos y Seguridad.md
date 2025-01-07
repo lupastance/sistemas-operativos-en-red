@@ -85,7 +85,7 @@ Windows Server incluye diversas herramientas para facilitar la gestión de recur
 
 ## 🔰 Ejercicios
 
-401. Supongamos que los alumnos gestionan una red ficticia con tres departamentos: Finanzas, Marketing y Recursos Humanos.  
+Supongamos que debéis gestionar una red ficticia con tres departamentos: Finanzas, Marketing y Recursos Humanos.  
 
 - **Actividad 1**: Crear tres carpetas en el servidor:  
   - Finanzas: Solo accesible para los miembros del departamento de Finanzas.  
@@ -93,7 +93,7 @@ Windows Server incluye diversas herramientas para facilitar la gestión de recur
   - Recursos Humanos: Permitir que todos los usuarios puedan leer, pero solo el departamento de RRHH pueda modificar.  
 
 - **Resultado esperado**:  
-  Los alumnos deberán configurar las carpetas compartidas utilizando el Administrador del Servidor, asignar permisos adecuados y probar el acceso desde equipos cliente.
+  Debéis configurar las carpetas compartidas utilizando el Administrador del Servidor, asignar permisos adecuados y probar el acceso desde equipos cliente.
 
 ---
 
