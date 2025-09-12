@@ -764,7 +764,7 @@ Entre las principales ventajas de la automatización de instalaciones se encuent
 
 ## 📚 Ejercicios
 
-<i style="color: grey; text-decoration: line-through; opacity: 0.5;">🔰 101. Definir Requisitos de Hardware.
+🔰 101. Definir Requisitos de Hardware.
 Explica los requisitos mínimos y recomendados de hardware para instalar el sistema operativo Windows Server 2022. Incluye especificaciones de procesador, memoria RAM, y espacio en disco.
 
 🔰 102. HCL de Hardware: Investiga y describe qué es una Lista de Compatibilidad de Hardware (HCL) y por qué es importante consultarla antes de la instalación de un sistema operativo en red.
@@ -783,6 +783,6 @@ Explica los requisitos mínimos y recomendados de hardware para instalar el sist
 
 🔰 109. Pruebas de Compatibilidad: ¿Qué tipos de pruebas de compatibilidad se pueden realizar antes de la instalación de un sistema operativo en un nuevo hardware? Enumera y explica al menos tres tipos de pruebas.
 
-🔰 110. Problemas de Compatibilidad Comunes: Identifica y explica tres problemas comunes de compatibilidad que pueden surgir durante la instalación de un sistema operativo y cómo se pueden prevenir o resolver.</i>
+🔰 110. Problemas de Compatibilidad Comunes: Identifica y explica tres problemas comunes de compatibilidad que pueden surgir durante la instalación de un sistema operativo y cómo se pueden prevenir o resolver.
 
 🔰 111. Windows 2022 Server ➡️ [Descarga los ejercicios](assets/windows-2022-ejercicios.html)
