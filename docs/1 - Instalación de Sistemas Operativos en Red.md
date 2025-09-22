@@ -764,6 +764,7 @@ Entre las principales ventajas de la automatización de instalaciones se encuent
 
 ## 📚 Ejercicios
 
+<i style="text-decoration: line-through; opacity: .5">
 🔰 101. Definir Requisitos de Hardware.
 Explica los requisitos mínimos y recomendados de hardware para instalar el sistema operativo Windows Server 2022. Incluye especificaciones de procesador, memoria RAM, y espacio en disco.
 
@@ -785,4 +786,12 @@ Explica los requisitos mínimos y recomendados de hardware para instalar el sist
 
 🔰 110. Problemas de Compatibilidad Comunes: Identifica y explica tres problemas comunes de compatibilidad que pueden surgir durante la instalación de un sistema operativo y cómo se pueden prevenir o resolver.
 
+</i>
 🔰 111. Windows 2022 Server ➡️ [Descarga los ejercicios](assets/windows-2022-ejercicios.html)
+
+🔰 112. Hablando de particiones:
+
+- Enumera los sistemas de ficheros que existen
+- Explica sus características más importantes
+- Di para que sistemas operativos fueron creados
+- ¿es posible acceder a todos ellos a través de los distintos sistemas operativos que existen? rezona tu respuesta
