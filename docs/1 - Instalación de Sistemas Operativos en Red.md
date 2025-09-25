@@ -795,3 +795,5 @@ Explica los requisitos mínimos y recomendados de hardware para instalar el sist
 - Explica sus características más importantes
 - Di para que sistemas operativos fueron creados
 - ¿es posible acceder a todos ellos a través de los distintos sistemas operativos que existen? rezona tu respuesta
+
+🔰 113. Por cada tipo de actualización del sistema, describe 3 casos reales de cada una de ellas. Pon fechas de cuándo ocurrieron y cómo se solucionaron los casos críticos por vulnerabilidad en el sistema operativo. Puede ser cualquier actualización de cualquier versión de Windows hasta la fecha.
