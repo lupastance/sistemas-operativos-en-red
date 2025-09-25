@@ -789,6 +789,7 @@ Explica los requisitos mínimos y recomendados de hardware para instalar el sist
 </i>
 🔰 111. Windows 2022 Server ➡️ [Descarga los ejercicios](assets/windows-2022-ejercicios.html)
 
+<i style="text-decoration: line-through; opacity: .5">
 🔰 112. Hablando de particiones:
 
 - Enumera los sistemas de ficheros que existen
@@ -796,4 +797,5 @@ Explica los requisitos mínimos y recomendados de hardware para instalar el sist
 - Di para que sistemas operativos fueron creados
 - ¿es posible acceder a todos ellos a través de los distintos sistemas operativos que existen? rezona tu respuesta
 
+</i>
 🔰 113. Por cada tipo de actualización del sistema, describe 3 casos reales de cada una de ellas. Pon fechas de cuándo ocurrieron y cómo se solucionaron los casos críticos por vulnerabilidad en el sistema operativo. Puede ser cualquier actualización de cualquier versión de Windows hasta la fecha.
