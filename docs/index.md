@@ -202,4 +202,4 @@ En función del tiempo disponible que tenemos, el temario se ha dividido de la s
 
 Usaremos Discord como método de comunicación de información sobre la asignatura y este curso. Podéis hablar por el chat cuando queráis y usar los canales de estudio con audio por si queréis estudiar en un mismo sitio.
 
-La invitación al canal es la siguiente ➡️ [https://discord.gg/Rdyt6kvJAq](https://discord.gg/Rdyt6kvJAq)
+La invitación al canal es la siguiente ➡️ [https://discord.gg/9q4gX9vwbb](https://discord.gg/9q4gX9vwbb)

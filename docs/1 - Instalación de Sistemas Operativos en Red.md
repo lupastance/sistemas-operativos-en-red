@@ -785,5 +785,22 @@ Explica los requisitos mínimos y recomendados de hardware para instalar el sist
 🔰 109. Pruebas de Compatibilidad: ¿Qué tipos de pruebas de compatibilidad se pueden realizar antes de la instalación de un sistema operativo en un nuevo hardware? Enumera y explica al menos tres tipos de pruebas.
 
 🔰 110. Problemas de Compatibilidad Comunes: Identifica y explica tres problemas comunes de compatibilidad que pueden surgir durante la instalación de un sistema operativo y cómo se pueden prevenir o resolver.
+</i>
+
 
 🔰 111. Windows 2022 Server ➡️ [Descarga los ejercicios](assets/windows-2022-ejercicios.html)
+
+<i style="text-decoration: line-through; opacity: .5">
+🔰 112. Hablando de particiones:
+
+- Enumera los sistemas de ficheros que existen
+- Explica sus características más importantes
+- Di para que sistemas operativos fueron creados
+- ¿es posible acceder a todos ellos a través de los distintos sistemas operativos que existen? rezona tu respuesta
+
+
+🔰 113. Por cada tipo de actualización del sistema, describe 3 casos reales de cada una de ellas. Pon fechas de cuándo ocurrieron y cómo se solucionaron los casos críticos por vulnerabilidad en el sistema operativo. Puede ser cualquier actualización de cualquier versión de Windows hasta la fecha.
+
+</i>
+
+🔰 114. Crea un documento `XML` que sea capaz de instalar el sistema operativo `Windows 7 Ultimate x64` de manera desatendida, es decir, automática, **en una máquina virtual**. Configura ese archivo `XML` de tal manera que se cree un usuario con el nombre `automata` y la contraseña que quieras. Investiga cada etiqueta del archivo `XML` por Internet y explica cada una de ellas en un archivo PDF a parte. 
