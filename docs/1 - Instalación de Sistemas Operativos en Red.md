@@ -785,4 +785,6 @@ Explica los requisitos mínimos y recomendados de hardware para instalar el sist
 
 🔰 110. Problemas de Compatibilidad Comunes: Identifica y explica tres problemas comunes de compatibilidad que pueden surgir durante la instalación de un sistema operativo y cómo se pueden prevenir o resolver.</i>
 
-🔰 111. Windows 2022 Server ➡️ [Descarga los ejercicios](assets/windows-2022-ejercicios.html)
+🔰 111. Crea un documento `XML` que sea capaz de instalar el sistema operativo `Windows 7 Ultimate x64` de manera desatendida, es decir, automática, **en una máquina virtual**. Configura ese archivo `XML` de tal manera que se cree un usuario con el nombre `automata` y la contraseña que quieras. Investiga cada etiqueta del archivo `XML` por Internet y explica cada una de ellas en un archivo PDF a parte. 
+
+🔰 112. Windows 2022 Server ➡️ [Descarga los ejercicios](assets/windows-2022-ejercicios.html)
